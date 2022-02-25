@@ -1,3 +1,3 @@
-# gnn_drugs
+# Source Code of DComG paper
 
-## A repository for paper DComG: Drug Combination prediction by applying GNNs on DDI node2vec features
+## DComG: Drug Combination prediction by applying GNNs on DDI node2vec 
