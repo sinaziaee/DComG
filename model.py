@@ -17,7 +17,7 @@ class Net(torch.nn.Module):
     self.conv3 = GCNConv(hid_channels, out_channels)
     # 2nd type of graph layer
     self.conv4 = SAGEConv(in_channels=in_channels, out_channels=hid_channels)
-    self.conv5 = SAGEConv(in_channels=hiduu_channels, out_channels=hid_channels)
+    self.conv5 = SAGEConv(in_channels=hid_channels, out_channels=hid_channels)
     self.conv6 = SAGEConv(in_channels=hid_channels, out_channels=out_channels)
     # 3rd type of graph layer
     self.conv7 = GATConv(in_channels, hid_channels, heads=1, dropout=0.6)
