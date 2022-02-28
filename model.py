@@ -29,12 +29,12 @@ class Net(torch.nn.Module):
     if index == 0:
       x = self.conv1(x, edge_index)
       x = x.relu()
+      x = dropout(x, p=0.5, training=self.training)
+      x = self.conv2(x, edge_index)
+      x = x.relu()
+      x = dropout(x, p=0.5, training=self.training)
       x = self.conv3(x, edge_index)
     elif index == 1:
-      x = self.conv4(x, edge_index)
-      x = x.relu()
-      x = self.conv6(x, edge_index)
-    elif index == 2:
       x = self.conv4(x, edge_index)
       x = x.relu()
       x = dropout(x, p=0.5, training=self.training)
@@ -42,20 +42,7 @@ class Net(torch.nn.Module):
       x = x.relu()
       x = dropout(x, p=0.5, training=self.training)
       x = self.conv6(x, edge_index)
-    elif index == 3:
-      x = self.conv7(x, edge_index)
-      x = x.relu()
-      x = dropout(x, p=0.5, training=self.training)
-      x = self.conv8(x, edge_index)
-    elif index == 4:
-      x = self.conv4(x, edge_index)
-      x = x.relu()
-      x = dropout(x, p=0.5, training=self.training)
-      x = self.conv2(x, edge_index)
-      x = x.relu()
-      x = dropout(x, p=0.5, training=self.training)
-      x = self.conv6(x, edge_index)
-    elif index == 5:
+    elif index == 2:
       x = self.conv7(x, edge_index)
       x = x.relu()
       x = dropout(x, p=0.5, training=self.training)
@@ -63,6 +50,30 @@ class Net(torch.nn.Module):
       x = x.relu()
       x = dropout(x, p=0.5, training=self.training)
       x = self.conv8(x, edge_index)
+    elif index == 3:
+      x = self.conv4(x, edge_index)
+      x = x.relu()
+      x = dropout(x, p=0.5, training=self.training)
+      x = self.conv2(x, edge_index)
+      x = x.relu()
+      x = dropout(x, p=0.5, training=self.training)
+      x = self.conv6(x, edge_index)
+    elif index == 4:
+      x = self.conv7(x, edge_index)
+      x = x.relu()
+      x = dropout(x, p=0.5, training=self.training)
+      x = self.conv5(x, edge_index)
+      x = x.relu()
+      x = dropout(x, p=0.5, training=self.training)
+      x = self.conv8(x, edge_index)
+    elif index == 5:
+      x = self.conv1(x, edge_index)
+      x = x.relu()
+      x = dropout(x, p=0.5, training=self.training)
+      x = self.conv9(x, edge_index)
+      x = x.relu()
+      x = dropout(x, p=0.5, training=self.training)
+      x = self.conv3(x, edge_index)
     ####################################################
     elif index == 6:
       x = self.conv1(x, edge_index)
