@@ -12,6 +12,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
 
 
@@ -255,5 +256,160 @@ def plot_comparison(roc_auc_score):
         bar.set_width(width)
 
     plt.ylim(0.92, 0.99)
+    plt.grid()
+    plt.show()
+
+def train_model_on_folds_and_decode_all(folds, num_epochs, data=None, index=0, in_channels=None, hid_channels=128, out_channels=64, device=None, model_class=None, lr=0.0005, verbose=1):
+
+  train_loss = []
+  val_auc = []
+  test_auc = []
+  prob_adj_list = []
+
+  for fold in folds:
+    model = model_class(in_channels=in_channels, hid_channels=hid_channels, out_channels=out_channels).to(device)
+    optimizer = torch.optim.Adam(params = model.parameters(), lr=0.0005)
+
+    test_pref = 0
+    train_loss_list = []
+    val_acc_list = []
+    test_acc_list = []
+
+    
+    for epoch in range(0, num_epochs):
+      loss = train(optimizer=optimizer, data=fold, model=model, index=index)
+      (val_pref , test_pref), (v_aupr, t_aupr), (v_fscore, t_fscore) = test(data=fold, model=model, index=index)
+      train_loss_list.append(loss.detach().numpy())
+      val_acc_list.append(val_pref)
+      test_acc_list.append(test_pref)
+    
+    z = model.encode(data.x, data.edge_index, index=index)
+    final_edge_index, prob_adj = model.decode_all(z)
+    prob_adj_list.append(prob_adj)
+
+    train_loss.append(train_loss_list)
+    val_auc.append(val_acc_list)
+    test_auc.append(test_acc_list)
+
+  train_loss = np.array(train_loss)
+  val_auc = np.array(val_auc)
+  test_auc = np.array(test_auc)
+
+  train_loss = np.average(train_loss, axis=0)
+  val_auc = np.average(val_auc, axis=0)
+  test_auc = np.average(test_auc, axis=0)
+
+
+  print_train_result(train_loss, val_auc, test_auc, verbose=verbose)
+  plot_result(train_loss, val_auc, test_auc)
+
+  
+
+  return train_loss, val_auc, test_auc, model, prob_adj_list
+
+def predict_top_edges(data, prob_adj):
+  scaler = MinMaxScaler()
+  prob_adj = prob_adj.detach().numpy()
+  prob_adj = scaler.fit_transform(prob_adj)
+  threshold = 0.95
+  a = np.array(list((prob_adj > threshold).nonzero())).T
+  b = []
+  for e in a:
+      b.append(list(e))
+
+  found = 0
+  c_edges = np.array(data.edge_index.T)
+
+  all_edges = []
+
+  for e in c_edges:
+      all_edges.append(list(e))
+
+  for edge in b:
+      if edge in all_edges:
+          found += 1
+
+  all_0 = []
+  all_1 = []
+  all_2 = []
+
+  for i in range(prob_adj.shape[0]):
+      for j in range(prob_adj.shape[1]):
+          if i == j:
+              prob_adj[i, j] = 0
+          all_0.append(i)
+          all_1.append(j)
+          all_2.append(prob_adj[i, j])
+
+  all_0 = np.array(all_0)
+  all_1 = np.array(all_1)
+  all_2 = np.array(all_2)
+
+  all_0 = np.reshape(all_0, (len(all_0), 1))
+  all_1 = np.reshape(all_1, (len(all_1), 1))
+  all_2 = np.reshape(all_2, (len(all_2), 1))
+
+  all = pd.DataFrame(np.concatenate([all_0, all_1], axis=1), columns=['alias1', 'alias2'])
+  all['score'] = all_2
+  all = all.sort_values('score', ascending=False)
+
+  high_score_combinations = []
+  for row in all.values:
+      if row[2] >= 1:
+          high_score_combinations.append(list(np.array(row[:2], dtype=np.int16)))
+  
+  new_predicted_edges = []
+  for edge in high_score_combinations:
+      if edge not in all_edges:
+          new_predicted_edges.append(edge)
+
+  return high_score_combinations, new_predicted_edges
+
+def predict_new_edges(all_prob_adj_list, data):
+    all_pairs = []
+    for i in range(len(all_prob_adj_list)):
+        for j in range(len(all_prob_adj_list[i])):
+            for k in range(len(all_prob_adj_list[i][j])):
+                prob_adj = all_prob_adj_list[i][j][k]
+                high, pairs = predict_top_edges(data, prob_adj)
+                all_pairs.append(pairs)
+                print(len(high), len(pairs))
+    all_new_pairs = []
+    temp_edges = all_pairs[0]
+    count = 0
+    for edge in temp_edges:
+        t = 0
+        for i in range(len(all_pairs)):
+            e_list = all_pairs[i]
+            if edge in e_list:
+                t += 1
+        if t == len(all_pairs):
+            count += 1
+            all_new_pairs.append(edge)
+    return all_new_pairs
+
+def plotter(scores, method_names, colors):
+    plt.figure(figsize=(30, 6))
+
+    d = {'models': method_names, 'values': scores}
+    df = pd.DataFrame(d, columns=['models', 'values'])
+    plots = sns.barplot(x='models', y='values', data=df, color='gray')
+
+    width = 0.4
+
+    plt.title('AUC Test Score')
+    for i, bar in enumerate(plots.patches):
+        plots.annotate(format(bar.get_height(), '.3f'),
+        (bar.get_x() + bar.get_width() / 2,
+        bar.get_height()), ha='center', va='center', 
+        size=15, xytext=(-12, 10),
+        textcoords='offset points')
+        bar.set_width(width)
+        bar.set_color(colors[int(i / 6)])
+    
+    for item in plots.get_xticklabels():
+        item.set_rotation(-45)
+
+    plt.ylim(0.7, 0.99)
     plt.grid()
     plt.show()
