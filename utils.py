@@ -416,88 +416,88 @@ def plotter(scores, method_names, colors):
   plt.show()
 
 def all_features_graph_data(final_in_df, df_list, all_df):
-  x_in = final_in_df.iloc[:, :128]
-  x_in = np.array(x_in, dtype=np.float32)
-  nodes_list = list()
-  nodes_dict = dict()
-  ###################################################
-  drug_names = []
-  for drug in list(final_in_df.drugs):
-      count = 0
-      for df in df_list:
-          if drug in list(df.drugs):
-              count += 1
-      if count == len(df_list):
-          drug_names.append(drug)
+    x_in = final_in_df.iloc[:, :128]
+    x_in = np.array(x_in, dtype=np.float32)
+    nodes_list = list()
+    nodes_dict = dict()
+    reverse_nodes_dict = dict()
+    ###################################################
+    drug_names = []
+    for drug in list(final_in_df.drugs):
+        count = 0
+        for df in df_list:
+            if drug in list(df.drugs):
+                count += 1
+        if count == len(df_list):
+            drug_names.append(drug)
 
-  count = 0
-  for d in final_in_df.drugs.values:
-      if d in drug_names:
-          nodes_dict[d] = count
-          count+=1
-          nodes_list.append(d)
-  # print(len(drug_names))
-  ##############################################
-  str_edges = []
-  for row in all_df.values:
-      d1 = row[0]
-      d2 = row[1]
-      edge = [d1, d2]
-      if edge not in str_edges and [edge[1], edge[0]] not in str_edges and edge[0] in drug_names and edge[1] in drug_names:
-          str_edges.append(list(edge))
-          str_edges.append([edge[1], edge[0]])  
-  # print(len(str_edges))  
+    count = 0
+    for d in final_in_df.drugs.values:
+        if d in drug_names:
+            nodes_dict[d] = count
+            reverse_nodes_dict[count] = d
+            count+=1
+            nodes_list.append(d)
+    # print(len(drug_names))
+    ##############################################
+    str_edges = []
+    for row in all_df.values:
+        d1 = row[0]
+        d2 = row[1]
+        edge = [d1, d2]
+        if edge not in str_edges and [edge[1], edge[0]] not in str_edges and edge[0] in drug_names and edge[1] in drug_names:
+            str_edges.append(list(edge))
+            str_edges.append([edge[1], edge[0]])  
+    # print(len(str_edges))  
 
-  edges = []
-  for edge in str_edges:
-      d1 = nodes_dict[edge[0]]
-      d2 = nodes_dict[edge[1]]
-      edges.append([d1, d2])
-  # print(len(edges))
-  edges = torch.from_numpy(np.array(edges))
-  # print(edges)
-  ##########################################################
-  def check_all(drug, drug_names):
-      if drug in drug_names:
-          return True
-      else:
-          return False
+    edges = []
+    for edge in str_edges:
+        d1 = nodes_dict[edge[0]]
+        d2 = nodes_dict[edge[1]]
+        edges.append([d1, d2])
+    # print(len(edges))
+    edges = torch.from_numpy(np.array(edges))
+    # print(edges)
+    ##########################################################
+    def check_all(drug, drug_names):
+        if drug in drug_names:
+            return True
+        else:
+            return False
 
-  drug_numbers = []
-  drug_features = []
+    drug_numbers = []
+    drug_features = []
 
-  for drug in list(nodes_dict.keys()):
-      features = []
-      if check_all(drug, drug_names):
-          for i, df in enumerate(df_list):
-              # print(df.shape)
-              a = df[df.drugs == drug].iloc[:, :(df.shape[1]-2)].values.squeeze()
-              a = a[:a.shape[0]]
-              features.append(np.array(a, dtype=np.float32))
-          drug_features.append(features)
-          drug_numbers.append(drug)
+    for drug in list(nodes_dict.keys()):
+        features = []
+        if check_all(drug, drug_names):
+            for i, df in enumerate(df_list):
+                # print(df.shape)
+                a = df[df.drugs == drug].iloc[:, :(df.shape[1]-2)].values.squeeze()
+                a = a[:a.shape[0]]
+                features.append(np.array(a, dtype=np.float32))
+            drug_features.append(features)
+            drug_numbers.append(drug)
 
-  # print(len(drug_features))
+    # print(len(drug_features))
 
-  all_drug_features = []
-  for i in range(len(drug_features)):
-      l = []
-      for j in range(len(drug_features[i])):
-          z = drug_features[i][j]
-          for k in z:
-              l.append(k)
-      all_drug_features.append(np.array(l, dtype=np.float32))
-  all_drug_features = np.array(all_drug_features)
-  all_drug_features = torch.from_numpy(all_drug_features)
+    all_drug_features = []
+    for i in range(len(drug_features)):
+        l = []
+        for j in range(len(drug_features[i])):
+            z = drug_features[i][j]
+            for k in z:
+                l.append(k)
+        all_drug_features.append(np.array(l, dtype=np.float32))
+    all_drug_features = np.array(all_drug_features)
+    all_drug_features = torch.from_numpy(all_drug_features)
 
-  # print(all_drug_features.shape)
-
-  data_all = Data(x=all_drug_features, edge_index=edges.T)
-  return data_all
+    data_all = Data(x=all_drug_features, edge_index=edges.T)
+    return data_all, reverse_nodes_dict
 
 import pathlib
 import os
-
+################################################################
 def create_drugs_info_list_and_dict(all_df):
   out_dir = str(pathlib.Path().resolve())
   out_path = f'{out_dir}/datasets/dcdb.csv'
@@ -543,7 +543,7 @@ def create_drugs_info_list_and_dict(all_df):
           all_edges.append(list(edge))
           all_edges.append([edge[1], edge[0]])
   return drug_names, all_edges
-
+################################################################
 def save_preds_in_csv(all_new_pairs, reverse_node_dict, name):
     d1_names = []
     d2_names = []
@@ -569,7 +569,7 @@ def save_preds_in_csv(all_new_pairs, reverse_node_dict, name):
         os.mkdir(f'{out_dir}/predictions/')
 
     temp_df.to_csv(out_path, index=False)
-
+################################################################
 def predict_all_top_edges(all_prob_adj_list, data_list):
   all_pairs = []
   for i in range(len(all_prob_adj_list)): # on data_list (features)
@@ -582,7 +582,7 @@ def predict_all_top_edges(all_prob_adj_list, data_list):
       all_pairs.append(all_temp_pairs)
       
   return all_pairs
-
+################################################################
 def predict_top_new_edges(all_top_pairs):
   all_new_pairs = []
   for pairs in all_top_pairs:
@@ -601,3 +601,33 @@ def predict_top_new_edges(all_top_pairs):
         temp_new_pairs.append(edge)
     all_new_pairs.append(temp_new_pairs)
   return all_new_pairs
+
+def predict_all_features_top_edges(all_prob_adj_list, data):
+    all_pairs = []
+    for j in range(len(all_prob_adj_list)): # on models
+        all_temp_pairs = []
+        for k in range(len(all_prob_adj_list[j])): # on 5 folds
+            prob_adj = all_prob_adj_list[j][k]
+            high, pairs = predict_top_edges(data, prob_adj)
+            all_temp_pairs.append(pairs)
+        all_pairs.append(all_temp_pairs)   
+    return all_pairs
+
+def predict_all_features_top_new_edges(all_top_pairs):
+    all_new_pairs = []
+    for pairs in all_top_pairs:
+        temp_new_pairs = []
+        temp = pairs
+        temp_edges = temp[0]
+        count = 0
+        for edge in temp_edges:
+            t = 0
+            for i in range(len(temp)):
+                e_list = temp[i]
+                if edge in e_list:
+                    t += 1
+            if t == len(temp):
+                count += 1
+                temp_new_pairs.append(edge)
+        all_new_pairs.append(temp_new_pairs)
+    return all_new_pairs
