@@ -13,6 +13,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
+from torch_geometric.data import Data
 
 
 
@@ -366,50 +367,130 @@ def predict_top_edges(data, prob_adj):
   return high_score_combinations, new_predicted_edges
 
 def predict_new_edges(all_prob_adj_list, data):
-    all_pairs = []
-    for i in range(len(all_prob_adj_list)):
-        for j in range(len(all_prob_adj_list[i])):
-            for k in range(len(all_prob_adj_list[i][j])):
-                prob_adj = all_prob_adj_list[i][j][k]
-                high, pairs = predict_top_edges(data, prob_adj)
-                all_pairs.append(pairs)
-                print(len(high), len(pairs))
-    all_new_pairs = []
-    temp_edges = all_pairs[0]
-    count = 0
-    for edge in temp_edges:
-        t = 0
-        for i in range(len(all_pairs)):
-            e_list = all_pairs[i]
-            if edge in e_list:
-                t += 1
-        if t == len(all_pairs):
-            count += 1
-            all_new_pairs.append(edge)
-    return all_new_pairs
+  all_pairs = []
+  for i in range(len(all_prob_adj_list)):
+      for j in range(len(all_prob_adj_list[i])):
+          for k in range(len(all_prob_adj_list[i][j])):
+              prob_adj = all_prob_adj_list[i][j][k]
+              high, pairs = predict_top_edges(data, prob_adj)
+              all_pairs.append(pairs)
+              print(len(high), len(pairs))
+  all_new_pairs = []
+  temp_edges = all_pairs[0]
+  count = 0
+  for edge in temp_edges:
+      t = 0
+      for i in range(len(all_pairs)):
+          e_list = all_pairs[i]
+          if edge in e_list:
+              t += 1
+      if t == len(all_pairs):
+          count += 1
+          all_new_pairs.append(edge)
+  return all_new_pairs
 
 def plotter(scores, method_names, colors):
-    plt.figure(figsize=(30, 6))
+  plt.figure(figsize=(30, 6))
 
-    d = {'models': method_names, 'values': scores}
-    df = pd.DataFrame(d, columns=['models', 'values'])
-    plots = sns.barplot(x='models', y='values', data=df, color='gray')
+  d = {'models': method_names, 'values': scores}
+  df = pd.DataFrame(d, columns=['models', 'values'])
+  plots = sns.barplot(x='models', y='values', data=df, color='gray')
 
-    width = 0.4
+  width = 0.4
 
-    plt.title('AUC Test Score')
-    for i, bar in enumerate(plots.patches):
-        plots.annotate(format(bar.get_height(), '.3f'),
-        (bar.get_x() + bar.get_width() / 2,
-        bar.get_height()), ha='center', va='center', 
-        size=15, xytext=(-12, 10),
-        textcoords='offset points')
-        bar.set_width(width)
-        bar.set_color(colors[int(i / 6)])
-    
-    for item in plots.get_xticklabels():
-        item.set_rotation(-45)
+  plt.title('AUC Test Score')
+  for i, bar in enumerate(plots.patches):
+      plots.annotate(format(bar.get_height(), '.3f'),
+      (bar.get_x() + bar.get_width() / 2,
+      bar.get_height()), ha='center', va='center', 
+      size=15, xytext=(-12, 10),
+      textcoords='offset points')
+      bar.set_width(width)
+      bar.set_color(colors[int(i / 6)])
+  
+  for item in plots.get_xticklabels():
+      item.set_rotation(-45)
 
-    plt.ylim(0.7, 0.99)
-    plt.grid()
-    plt.show()
+  plt.ylim(0.7, 0.99)
+  plt.grid()
+  plt.show()
+
+def all_features_graph_data(final_in_df, df_list, all_df):
+  x_in = final_in_df.iloc[:, :128]
+  x_in = np.array(x_in, dtype=np.float32)
+  nodes_list = list()
+  nodes_dict = dict()
+  ###################################################
+  drug_names = []
+  for drug in list(final_in_df.drugs):
+      count = 0
+      for df in df_list:
+          if drug in list(df.drugs):
+              count += 1
+      if count == len(df_list):
+          drug_names.append(drug)
+
+  count = 0
+  for d in final_in_df.drugs.values:
+      if d in drug_names:
+          nodes_dict[d] = count
+          count+=1
+          nodes_list.append(d)
+  # print(len(drug_names))
+  ##############################################
+  str_edges = []
+  for row in all_df.values:
+      d1 = row[0]
+      d2 = row[1]
+      edge = [d1, d2]
+      if edge not in str_edges and [edge[1], edge[0]] not in str_edges and edge[0] in drug_names and edge[1] in drug_names:
+          str_edges.append(list(edge))
+          str_edges.append([edge[1], edge[0]])  
+  # print(len(str_edges))  
+
+  edges = []
+  for edge in str_edges:
+      d1 = nodes_dict[edge[0]]
+      d2 = nodes_dict[edge[1]]
+      edges.append([d1, d2])
+  # print(len(edges))
+  edges = torch.from_numpy(np.array(edges))
+  # print(edges)
+  ##########################################################
+  def check_all(drug, drug_names):
+      if drug in drug_names:
+          return True
+      else:
+          return False
+
+  drug_numbers = []
+  drug_features = []
+
+  for drug in list(nodes_dict.keys()):
+      features = []
+      if check_all(drug, drug_names):
+          for i, df in enumerate(df_list):
+              # print(df.shape)
+              a = df[df.drugs == drug].iloc[:, :(df.shape[1]-2)].values.squeeze()
+              a = a[:a.shape[0]]
+              features.append(np.array(a, dtype=np.float32))
+          drug_features.append(features)
+          drug_numbers.append(drug)
+
+  # print(len(drug_features))
+
+  all_drug_features = []
+  for i in range(len(drug_features)):
+      l = []
+      for j in range(len(drug_features[i])):
+          z = drug_features[i][j]
+          for k in z:
+              l.append(k)
+      all_drug_features.append(np.array(l, dtype=np.float32))
+  all_drug_features = np.array(all_drug_features)
+  all_drug_features = torch.from_numpy(all_drug_features)
+
+  # print(all_drug_features.shape)
+
+  data_all = Data(x=all_drug_features, edge_index=edges.T)
+  return data_all
