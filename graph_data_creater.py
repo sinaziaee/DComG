@@ -17,10 +17,13 @@ def create_graph_data(df, all_edges):
 
     nodes_data_list = list()
     nodes_data_dict = dict()
+    reverse_node_data_dict = dict()
+
 
     count = 0
     for x in df.values[:, (c_size-2):(c_size-1)]:
         nodes_data_dict[str(x.squeeze())] = count
+        reverse_node_data_dict[count] = str(x.squeeze())
         count+=1
         nodes_data_list.append(str(x.squeeze()))
 
@@ -34,10 +37,10 @@ def create_graph_data(df, all_edges):
     x_data = torch.from_numpy(np.array(x_data))
 
     data = Data(x=x_data, edge_index=edges_data.T)
-    return data
+    return data, reverse_node_data_dict
 
 
-def create_graph_data_with_different_features():
+def create_graph_data_with_different_features(with_reverse=False):
     # final_dt_df -> onehot drug-target     : 760 * 790
     # final_w2v_df -> word2vec              : 614 * 200
     # final_nv_df -> node2vec               : 752 * 128
@@ -55,8 +58,13 @@ def create_graph_data_with_different_features():
 
     df_list = [final_dt_df, final_w2v_df, final_nv_df, final_fin_df, final_in_df, final_se_df]
     data_list = []
+    reverse_node_dict_list = []
     for df in df_list:
-        data = create_graph_data(df, all_edges)
+        data, reverse_node_data_dict = create_graph_data(df, all_edges)
         data_list.append(data)
+        reverse_node_dict_list.append(reverse_node_data_dict)
     
-    return data_list
+    if with_reverse == True:
+        return data_list, reverse_node_dict_list
+    else:
+        return data_list

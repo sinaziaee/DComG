@@ -494,3 +494,110 @@ def all_features_graph_data(final_in_df, df_list, all_df):
 
   data_all = Data(x=all_drug_features, edge_index=edges.T)
   return data_all
+
+import pathlib
+import os
+
+def create_drugs_info_list_and_dict(all_df):
+  out_dir = str(pathlib.Path().resolve())
+  out_path = f'{out_dir}/datasets/dcdb.csv'
+
+  if 'dcdb.csv' not in os.listdir(f'{out_dir}/datasets/'):
+      src_path = f'{out_dir}/datasets/COMPONENTS.txt'
+      f = open(src_path, 'r')
+
+      csv_1 = []
+      csv_2 = []
+
+      for line in f.readlines():
+          each = line.split(' ')[0].split('\t')
+          csv_1.append(each[0])
+          csv_2.append(each[1])
+
+      # print(len(csv_1))
+      # print(len(csv_2))
+
+      csv_1 = np.array(csv_1[1:])
+      csv_2 = np.array(csv_2[1:])
+
+      csv_1 = np.reshape(csv_1, (len(csv_1), 1))
+      csv_2 = np.reshape(csv_2, (len(csv_2), 1))
+
+      drug_df = pd.DataFrame(np.concatenate([csv_1, csv_2], axis=1), columns=['drug', 'name'])
+      drug_df
+
+      drug_df.to_csv(out_path, index=False)
+  else:
+      drug_df = pd.read_csv(out_path)
+
+  drug_names = dict()
+
+  for drug in drug_df.values:
+      drug = list(drug)
+      drug_names[drug[0]] = drug[1]
+
+  all_edges = []
+
+  for edge in all_df.values:
+      if list(edge) not in all_edges and [edge[1], edge[0]] not in all_edges:
+          all_edges.append(list(edge))
+          all_edges.append([edge[1], edge[0]])
+  return drug_names, all_edges
+
+def save_preds_in_csv(all_new_pairs, reverse_node_dict, name):
+    d1_names = []
+    d2_names = []
+    for edge in all_new_pairs:
+        a1 = reverse_node_dict[edge[0]]
+        a2 = reverse_node_dict[edge[1]]
+        d1_names.append(a1)
+        d2_names.append(a2)
+    all_new_pairs = np.array(all_new_pairs)
+    temp_df = pd.DataFrame()
+    try:
+        temp_df['a1'] = all_new_pairs[:, 0]
+        temp_df['a2'] = all_new_pairs[:, 1]
+        temp_df['d1'] = d1_names
+        temp_df['d2'] = d2_names
+    except Exception as e:
+        print(name)
+
+    out_dir = str(pathlib.Path().resolve())
+    out_path = f'{out_dir}/predictions/{name}.csv'
+
+    if 'predictions' not in os.listdir(out_dir):
+        os.mkdir(f'{out_dir}/predictions/')
+
+    temp_df.to_csv(out_path, index=False)
+
+def predict_all_top_edges(all_prob_adj_list, data_list):
+  all_pairs = []
+  for i in range(len(all_prob_adj_list)): # on data_list (features)
+    for j in range(len(all_prob_adj_list[i])): # on models
+      all_temp_pairs = []
+      for k in range(len(all_prob_adj_list[i][j])): # on 5 folds
+        prob_adj = all_prob_adj_list[i][j][k]
+        high, pairs = predict_top_edges(data_list[i], prob_adj)
+        all_temp_pairs.append(pairs)
+      all_pairs.append(all_temp_pairs)
+      
+  return all_pairs
+
+def predict_top_new_edges(all_top_pairs):
+  all_new_pairs = []
+  for pairs in all_top_pairs:
+    temp_new_pairs = []
+    temp = pairs
+    temp_edges = temp[0]
+    count = 0
+    for edge in temp_edges:
+      t = 0
+      for i in range(len(temp)):
+        e_list = temp[i]
+        if edge in e_list:
+          t += 1
+      if t == len(temp):
+        count += 1
+        temp_new_pairs.append(edge)
+    all_new_pairs.append(temp_new_pairs)
+  return all_new_pairs
