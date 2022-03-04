@@ -631,3 +631,41 @@ def predict_all_features_top_new_edges(all_top_pairs):
                 temp_new_pairs.append(edge)
         all_new_pairs.append(temp_new_pairs)
     return all_new_pairs
+
+def decoding_drug_ids():
+    out_dir = str(pathlib.Path().resolve())
+    out_path = f'{out_dir}/datasets/dcdb.csv'
+    if 'dcdb.csv' not in os.listdir(f'{out_dir}/datasets/'):
+        src_path = f'{out_dir}/datasets/COMPONENTS.txt'
+        f = open(src_path, 'r')
+
+        csv_1 = []
+        csv_2 = []
+
+        for line in f.readlines():
+            each = line.split(' ')[0].split('\t')
+            csv_1.append(each[0])
+            csv_2.append(each[1])
+
+        print(len(csv_1))
+        print(len(csv_2))
+
+        csv_1 = np.array(csv_1[1:])
+        csv_2 = np.array(csv_2[1:])
+
+        csv_1 = np.reshape(csv_1, (len(csv_1), 1))
+        csv_2 = np.reshape(csv_2, (len(csv_2), 1))
+
+        drug_df = pd.DataFrame(np.concatenate([csv_1, csv_2], axis=1), columns=['drug', 'name'])
+        drug_df
+
+        drug_df.to_csv(out_path, index=False)
+    else:
+        drug_df = pd.read_csv(out_path)
+
+    drug_names = dict()
+
+    for drug in drug_df.values:
+        drug = list(drug)
+        drug_names[drug[0]] = drug[1]
+    return drug_names
