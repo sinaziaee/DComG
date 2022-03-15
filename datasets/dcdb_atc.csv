@@ -1,0 +1,905 @@
+,drug,name,atc1,atc2,atc3,atc1_first,atc2_first,atc1_first_class,atc2_first_class
+0,DCC1838,Methyclothiazide,C03AA08,-,-,C,-,Cardiovascular system,-
+1,DCC0413,Garenoxacin,J01MA19,-,-,J,-,Antiinfectives for systemic use,-
+2,DCC0520,Betaine,A16AA06,-,-,A,-,Alimentary tract and metabolism,-
+3,DCC0639,Atrasentan,-,-,-,-,-,-,-
+4,DCC0029,Lovastatin,C10AA02,-,-,C,-,Cardiovascular system,-
+5,DCC0030,Nevirapine,J05AG01,-,-,J,-,Antiinfectives for systemic use,-
+6,DCC0031,Butalbital,N05CB01,-,-,N,-,Nervous system,-
+7,DCC0032,Phenytoin,N03AB02,N03AB04,N03AB05,N,N,Nervous system,Nervous system
+8,DCC0033,Clotrimazole,A01AB18,D01AC01,G01AF02,A,D,Alimentary tract and metabolism,Dermatologicals
+9,DCC0035,Sulfisoxazole,J01EB05,S01AB02,-,J,S,Antiinfectives for systemic use,Sensory organs
+10,DCC0036,Metoprolol,C07AB02,C07AB52,-,C,C,Cardiovascular system,Cardiovascular system
+11,DCC0037,Topiramate,N03AX11,-,-,N,-,Nervous system,-
+12,DCC0034,Cycloserine,J04AB01,-,-,J,-,Antiinfectives for systemic use,-
+13,DCC0038,Olmesartan,C09CA08,-,-,C,-,Cardiovascular system,-
+14,DCC0039,Theophylline,R03DA04,R03DA05,-,R,R,Respiratory system,Respiratory system
+15,DCC0040,Lidocaine,C01BB01,C05AD01,D04AB01,C,C,Cardiovascular system,Cardiovascular system
+16,DCC0041,Clemastine,R06AA04,D04AA14,-,R,D,Respiratory system,Dermatologicals
+17,DCC0042,Etonogestrel,G03AC08,-,-,G,-,Genito-urinary system and sex hormones,-
+18,DCC0054,Nitroprusside,C02DD01,-,-,C,-,Cardiovascular system,-
+19,DCC0055,Indomethacin,M01AB01,C01EB03,-,M,C,Musculo-skeletal system,Cardiovascular system
+20,DCC0056,Ethambutol,J04AK02,-,-,J,-,Antiinfectives for systemic use,-
+21,DCC0057,Metformin,A10BA02,A10BD11,-,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+22,DCC0058,Ipratropium,R01AX03,R03BB01,-,R,R,Respiratory system,Respiratory system
+23,DCC0059,Olanzapine,N05AH03,-,-,N,-,Nervous system,-
+24,DCC0060,Atenolol,C07AB03,C07AB11,-,C,C,Cardiovascular system,Cardiovascular system
+25,DCC0061,Omeprazole,A02BC01,A02BC05,-,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+26,DCC0062,Pyrazinamide,J04AK01,-,-,J,-,Antiinfectives for systemic use,-
+27,DCC0063,Cetirizine,R06AE07,R06AE09,-,R,R,Respiratory system,Respiratory system
+28,DCC0064,Diltiazem,C08DB01,-,-,C,-,Cardiovascular system,-
+29,DCC0065,Aztreonam,J01DF01,-,-,J,-,Antiinfectives for systemic use,-
+30,DCC0043,Morphine,G04BE07,N02AA01,N02AA04,G,N,Genito-urinary system and sex hormones,Nervous system
+31,DCC0044,Bupivacaine,N01BB01,N01BB10,-,N,N,Nervous system,Nervous system
+32,DCC0045,Tenofovir,J05AF07,-,-,J,-,Antiinfectives for systemic use,-
+33,DCC0046,Mitomycin,L01DC03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+34,DCC0047,Chlorthalidone,C03BA04,-,-,C,-,Cardiovascular system,-
+35,DCC0048,Valproic,N03AG01,-,-,N,-,Nervous system,-
+36,DCC0049,Acetaminophen,N02BE01,-,-,N,-,Nervous system,-
+37,DCC0050,Gefitinib,L01XE02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+38,DCC0051,Codeine,N02AA08,R05DA04,R05DA12,N,R,Nervous system,Respiratory system
+39,DCC0052,Piperacillin,J01CA12,-,-,J,-,Antiinfectives for systemic use,-
+40,DCC0053,Amitriptyline,N06AA09,-,-,N,-,Nervous system,-
+41,DCC0001,Cetuximab,L01XC06,-,-,L,-,Antineoplastic and immunomodulating agents,-
+42,DCC0002,Peginterferon,L03AB11,-,-,L,-,Antineoplastic and immunomodulating agents,-
+43,DCC0003,Peginterferon,L03AB10,-,-,L,-,Antineoplastic and immunomodulating agents,-
+44,DCC0004,Asparaginase,L01XX02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+45,DCC0005,Gramicidin,R02AB30,-,-,R,-,Respiratory system,-
+46,DCC0006,Aldesleukin,L03AC01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+47,DCC0007,Adalimumab,L04AB04,-,-,L,-,Antineoplastic and immunomodulating agents,-
+48,DCC0008,Trastuzumab,L01XC03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+49,DCC0009,Rituximab,L01XC02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+50,DCC0010,Daptomycin,J01XX09,-,-,J,-,Antiinfectives for systemic use,-
+51,DCC0011,Cyclosporine,L04AD01,S01XA18,-,L,S,Antineoplastic and immunomodulating agents,Sensory organs
+52,DCC0012,Bevacizumab,L01XC07,-,-,L,-,Antineoplastic and immunomodulating agents,-
+53,DCC0013,Vitamin,B03BB01,B03BA01,-,B,B,Blood and blood forming organs,Blood and blood forming organs
+54,DCC0014,Valsartan,C09CA03,-,-,C,-,Cardiovascular system,-
+55,DCC0015,Ramipril,C09AA05,-,-,C,-,Cardiovascular system,-
+56,DCC0016,Bortezomib,L01XX32,-,-,L,-,Antineoplastic and immunomodulating agents,-
+57,DCC0017,Carbidopa,-,-,-,-,-,-,-
+58,DCC0018,Tramadol,N02AX02,-,-,N,-,Nervous system,-
+59,DCC0019,Oseltamivir,J05AH02,-,-,J,-,Antiinfectives for systemic use,-
+60,DCC0020,Erythromycin,D10AF02,J01FA01,S01AA17,D,J,Dermatologicals,Antiinfectives for systemic use
+61,DCC0021,Caffeine,N06BC01,N02BE01,-,N,N,Nervous system,Nervous system
+62,DCC0022,Sildenafil,G04BE03,-,-,G,-,Genito-urinary system and sex hormones,-
+63,DCC0023,Pyrimethamine,P01BD01,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+64,DCC0024,Azithromycin,J01FA10,S01AA26,-,J,S,Antiinfectives for systemic use,Sensory organs
+65,DCC0025,Adapalene,D10AD03,-,-,D,-,Dermatologicals,-
+66,DCC0026,Pantoprazole,A02BC02,-,-,A,-,Alimentary tract and metabolism,-
+67,DCC0027,Glimepiride,A10BB12,-,-,A,-,Alimentary tract and metabolism,-
+68,DCC0028,Indinavir,J05AE02,-,-,J,-,Antiinfectives for systemic use,-
+69,DCC0532,Trientine,A16AX12,-,-,A,-,Alimentary tract and metabolism,-
+70,DCC0545,Sofosbuvir,J05AP08,-,-,J,-,Antiinfectives for systemic use,-
+71,DCC0547,Avibactam,-,-,-,-,-,-,-
+72,DCC0488,Sotatercept,-,-,-,-,-,-,-
+73,DCC0494,Cobicistat,V03AX03,-,-,V,-,Various,-
+74,DCC0511,Eldecalcitol,-,-,-,-,-,-,-
+75,DCC0551,Desirudin,B01AE01,-,-,B,-,Blood and blood forming organs,-
+76,DCC0552,Conjugated,G03CA57,-,-,G,-,Genito-urinary system and sex hormones,-
+77,DCC0565,Azelnidipine,-,-,-,-,-,-,-
+78,DCC0573,Cerebrolysin,N07X,-,-,N,-,Nervous system,-
+79,DCC0585,Levomefolic,B03BB51,-,-,B,-,Blood and blood forming organs,-
+80,DCC0587,Ferrous,B03AA07,-,-,B,-,Blood and blood forming organs,-
+81,DCC0590,Tetracaine,S01HA03,-,-,S,-,Sensory organs,-
+82,DCC0596,ABT-751,-,-,-,-,-,-,-
+83,DCC0612,Benzathine,J01CE08,-,-,J,-,Antiinfectives for systemic use,-
+84,DCC0613,Abiraterone,L02BX03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+85,DCC0601,Interferon,L03AB01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+86,DCC0603,Follitropin,G03GA,-,-,G,-,Genito-urinary system and sex hormones,-
+87,DCC0608,Levomefolate,-,-,-,-,-,-,-
+88,DCC0620,Canfosfamide,-,-,-,-,-,-,-
+89,DCC0622,Iniparib,-,-,-,-,-,-,-
+90,DCC0628,Bendamustine,L01AA09,-,-,L,-,Antineoplastic and immunomodulating agents,-
+91,DCC0629,Lintuzumab,-,-,-,-,-,-,-
+92,DCC0630,Zosuquidar,-,-,-,-,-,-,-
+93,DCC0634,Enzastaurin,-,-,-,-,-,-,-
+94,DCC0635,Phenylbutyrate,A16AX03,-,-,A,-,Alimentary tract and metabolism,-
+95,DCC0640,Ibritumomab,V10XX02,-,-,V,-,Various,-
+96,DCC0657,Lapaquistat,-,-,-,-,-,-,-
+97,DCC0665,Bazedoxifene,G03XC02,-,-,G,-,Genito-urinary system and sex hormones,-
+98,DCC0666,O6-benzylguanine,-,-,-,-,-,-,-
+99,DCC0684,Zotarolimus,-,-,-,-,-,-,-
+100,DCC0652,Zibotentan,-,-,-,-,-,-,-
+101,DCC0700,Fimasartan,C09CA10,-,-,C,-,Cardiovascular system,-
+102,DCC0705,Polyethylene,A06AD15,-,-,A,-,Alimentary tract and metabolism,-
+103,DCC0717,Romiplostim,B02BX04,-,-,B,-,Blood and blood forming organs,-
+104,DCC0723,Cediranib,L01EK02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+105,DCC0738,Indacaterol,R03AC18,-,-,R,-,Respiratory system,-
+106,DCC0741,Lixisenatide,A10BX10,-,-,A,-,Alimentary tract and metabolism,-
+107,DCC0764,Boceprevir,J05AE12,-,-,J,-,Antiinfectives for systemic use,-
+108,DCC0768,Panobinostat,L01XH03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+109,DCC0769,Piperaquine,P01BF07,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+110,DCC0770,Casopitant,A04AD13,-,-,A,-,Alimentary tract and metabolism,-
+111,DCC0777,Pazopanib,L01XE11,-,-,L,-,Antineoplastic and immunomodulating agents,-
+112,DCC0949,Pixantrone,L01DB11,-,-,L,-,Antineoplastic and immunomodulating agents,-
+113,DCC0956,Obatoclax,-,-,-,-,-,-,-
+114,DCC0959,Simethicone,-,-,-,-,-,-,-
+115,DCC0969,GSK2190915,-,-,-,-,-,-,-
+116,DCC0979,Danoprevir,-,-,-,-,-,-,-
+117,DCC0990,Dopexamine,C01CA14,-,-,C,-,Cardiovascular system,-
+118,DCC1010,Bismuth,A02BX05,-,-,A,-,Alimentary tract and metabolism,-
+119,DCC1011,Tanezumab,N02BG12,-,-,N,-,Nervous system,-
+120,DCC1017,SCH,-,-,-,-,-,-,-
+121,DCC1020,Trebananib,-,-,-,-,-,-,-
+122,DCC1021,Tropisetron,A04AA03,-,-,A,-,Alimentary tract and metabolism,-
+123,DCC1024,Teprotumumab,L04AA53,-,-,L,-,Antineoplastic and immunomodulating agents,-
+124,DCC1035,Rebamipide,A02BX14,-,-,A,-,Alimentary tract and metabolism,-
+125,DCC1040,Ganitumab,-,-,-,-,-,-,-
+126,DCC1046,Edoxaban,B01AF03,-,-,B,-,Blood and blood forming organs,-
+127,DCC1060,Simeprevir,J05AP05,-,-,J,-,Antiinfectives for systemic use,-
+128,DCC1084,Obinutuzumab,L01XC15,-,-,L,-,Antineoplastic and immunomodulating agents,-
+129,DCC1097,Estradiol,G03CA03,-,-,G,-,Genito-urinary system and sex hormones,-
+130,DCC1098,Brivaracetam,N03AX23,-,-,N,-,Nervous system,-
+131,DCC1105,Somatokine,-,-,-,-,-,-,-
+132,DCC1106,Ofatumumab,L01XC10,-,-,L,-,Antineoplastic and immunomodulating agents,-
+133,DCC1108,Dornase,R05CB13,-,-,R,-,Respiratory system,-
+134,DCC1110,Enbrel,L04AB01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+135,DCC1112,Leuprolide,L02AE02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+136,DCC1116,Goserelin,L02AE03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+137,DCC1117,Reteplase,B01AD07,-,-,B,-,Blood and blood forming organs,-
+138,DCC1122,Anakinra,L04AC03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+139,DCC1124,Insulin,A10AB01,A10AE05,A10AB04,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+140,DCC1126,Interferon,L03AB01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+141,DCC1118,Epoetin-alpha,B03XA02,B03XA01,-,B,B,Blood and blood forming organs,Blood and blood forming organs
+142,DCC1120,Pegfilgrastim,L03AA10,-,-,L,-,Antineoplastic and immunomodulating agents,-
+143,DCC1121,Sargramostim,L03AA09,-,-,L,-,Antineoplastic and immunomodulating agents,-
+144,DCC0779,Dapagliflozin,A10BX09,-,-,A,-,Alimentary tract and metabolism,-
+145,DCC0784,Albinterferon,L03AB12,-,-,L,-,Antineoplastic and immunomodulating agents,-
+146,DCC0787,Ipilimumab,L01XC11,-,-,L,-,Antineoplastic and immunomodulating agents,-
+147,DCC0789,Elesclomol,-,-,-,-,-,-,-
+148,DCC0793,Lactate,G01AD01,-,-,G,-,Genito-urinary system and sex hormones,-
+149,DCC0794,Sorbitol,A06AD18,-,-,A,-,Alimentary tract and metabolism,-
+150,DCC0797,Vilanterol,R03AL08,-,-,R,-,Respiratory system,-
+151,DCC0799,Piperonyl,N05CX06,-,-,N,-,Nervous system,-
+152,DCC0802,Raltegravir,J05AX08,-,-,J,-,Antiinfectives for systemic use,-
+153,DCC0810,L-NMMA,-,-,-,-,-,-,-
+154,DCC0811,Sulfonylurea,A10BB02,-,-,A,-,Alimentary tract and metabolism,-
+155,DCC0818,Lithium,N05AN01,-,-,N,-,Nervous system,-
+156,DCC0832,Bismuth,A02BX05,-,-,A,-,Alimentary tract and metabolism,-
+157,DCC0834,Triptorelin,L02AE04,-,-,L,-,Antineoplastic and immunomodulating agents,-
+158,DCC0836,Testosterone,-,-,-,-,-,-,-
+159,DCC0849,Drotrecogin,B01AD10,-,-,B,-,Blood and blood forming organs,-
+160,DCC0850,Bisacodyl,A06AB02,A06AG02,-,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+161,DCC0859,Lovaza,-,-,-,-,-,-,-
+162,DCC0863,Meglumine,P01CB01,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+163,DCC0868,Ocrelizumab,L04AA36,-,-,L,-,Antineoplastic and immunomodulating agents,-
+164,DCC0853,Linifanib,-,-,-,-,-,-,-
+165,DCC0875,Nicorandil,C01DX16,-,-,C,-,Cardiovascular system,-
+166,DCC0881,Dienogest,G03DB08,-,-,G,-,Genito-urinary system and sex hormones,-
+167,DCC0885,Linagliptin,A10BH05,-,-,A,-,Alimentary tract and metabolism,-
+168,DCC0886,2-Propanol,D08AX03,-,-,D,-,Dermatologicals,-
+169,DCC0887,Cholecalciferol,A11CC05,-,-,A,-,Alimentary tract and metabolism,-
+170,DCC0893,Sulbactam,J01CG01,-,-,J,-,Antiinfectives for systemic use,-
+171,DCC0897,Balapiravir,-,-,-,-,-,-,-
+172,DCC0903,Elvitegravir,J05AX11,-,-,J,-,Antiinfectives for systemic use,-
+173,DCC0909,Octenidine,D08AJ57,-,-,D,-,Dermatologicals,-
+174,DCC0912,Dihydroartemisinin,P01BE05,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+175,DCC0904,Neratinib,L01EH02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+176,DCC0907,Bicarbonate,B05CB04,-,-,B,-,Blood and blood forming organs,-
+177,DCC0908,Medroxyprogeterone,G03AC06,G03DA02,L02AB02,G,G,Genito-urinary system and sex hormones,Genito-urinary system and sex hormones
+178,DCC0917,Campath,L04AA34,-,-,L,-,Antineoplastic and immunomodulating agents,-
+179,DCC0920,Ketorolac,M01AB15,S01BC05,-,M,S,Musculo-skeletal system,Sensory organs
+180,DCC0927,Pyronaridine,P01BF06,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+181,DCC0932,Olaparib,L01XK01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+182,DCC0938,Tricalcium,A12AA20,-,-,A,-,Alimentary tract and metabolism,-
+183,DCC0944,Telcagepant,-,-,-,-,-,-,-
+184,DCC0945,Sepantronium,-,-,-,-,-,-,-
+185,DCC0414,Mesna,R05CB05,V03AF01,-,R,V,Respiratory system,Various
+186,DCC0415,Sabarubicin,-,-,-,-,-,-,-
+187,DCC0066,Mefloquine,P01BC02,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+188,DCC0416,Potassium,A12BA01,-,-,A,-,Alimentary tract and metabolism,-
+189,DCC0417,Articaine,N01BB08,-,-,N,-,Nervous system,-
+190,DCC0418,Dipropofol,N01AX10,-,-,N,-,Nervous system,-
+191,DCC0419,Torcetrapib,-,-,-,-,-,-,-
+192,DCC0420,Tirapazamine,-,-,-,-,-,-,-
+193,DCC0421,Vildagliptin,A10BH02,-,-,A,-,Alimentary tract and metabolism,-
+194,DCC0422,Methylseleninic,-,-,-,-,-,-,-
+195,DCC0423,"1,2,4-trioxolane",-,-,-,-,-,-,-
+196,DCC0424,Alagebrium,-,-,-,-,-,-,-
+197,DCC0426,2-methoxyestradiol,-,-,-,-,-,-,-
+198,DCC0427,CI-1040,-,-,-,-,-,-,-
+199,DCC0428,GW6471,-,-,-,-,-,-,-
+200,DCC0429,Afatinib,L01XE13,-,-,L,-,Antineoplastic and immunomodulating agents,-
+201,DCC0430,NU6140,-,-,-,-,-,-,-
+202,DCC0431,Curcumin,-,-,-,-,-,-,-
+203,DCC0432,Beta-lapachone,-,-,-,-,-,-,-
+204,DCC0436,Adarotene,-,-,-,-,-,-,-
+205,DCC0437,AEE788,-,-,-,-,-,-,-
+206,DCC0433,ST-91,-,-,-,-,-,-,-
+207,DCC0434,Luteolin,-,-,-,-,-,-,-
+208,DCC0435,Kynurenic,-,-,-,-,-,-,-
+209,DCC0439,"5-2,4-dihydroxypyrimidine",-,-,-,-,-,-,-
+210,DCC0440,Mizoribine,-,-,-,-,-,-,-
+211,DCC0441,Dibutyryl-cGMP,-,-,-,-,-,-,-
+212,DCC0442,Emodin,-,-,-,-,-,-,-
+213,DCC0443,Pipemidic,J01MB04,-,-,J,-,Antiinfectives for systemic use,-
+214,DCC0444,Ponicidin,-,-,-,-,-,-,-
+215,DCC0445,Sodium,A12CA01,-,-,A,-,Alimentary tract and metabolism,-
+216,DCC0446,Tubacin,-,-,-,-,-,-,-
+217,DCC0447,Thonzonium,-,-,-,-,-,-,-
+218,DCC0448,Laropiprant,C10AD52,-,-,C,-,Cardiovascular system,-
+219,DCC0450,Miltefosine,L01XX09,-,-,L,-,Antineoplastic and immunomodulating agents,-
+220,DCC0451,Trichostatin,-,-,-,-,-,-,-
+221,DCC0452,Methylene,V03AB17,V04CG05,-,V,V,Various,Various
+222,DCC0453,Docosahexaenoic,C10AX06,-,-,C,-,Cardiovascular system,-
+223,DCC0454,Artemisinin,P01BE01,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+224,DCC0455,Naphthoquine,P01BF08,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+225,DCC0456,Tanespimycin,-,-,-,-,-,-,-
+226,DCC0457,Sorivudine,-,-,-,-,-,-,-
+227,DCC0458,Phenoxodiol,-,-,-,-,-,-,-
+228,DCC0459,CP55940,-,-,-,-,-,-,-
+229,DCC0460,Raclopride,-,-,-,-,-,-,-
+230,DCC0461,Lexatumumab,-,-,-,-,-,-,-
+231,DCC0462,ABT-737,-,-,-,-,-,-,-
+232,DCC0463,Acrivastine,R06AX18,-,-,R,-,Respiratory system,-
+233,DCC0464,Artesunate,P01BE03,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+234,DCC0465,SC144,-,-,-,-,-,-,-
+235,DCC0466,Chitosan,-,-,-,-,-,-,-
+236,DCC0467,Tetracaine,C05AD02,D04AB06,N01BA03,C,D,Cardiovascular system,Dermatologicals
+237,DCC0468,Benzoyl,D10AE01,-,-,D,-,Dermatologicals,-
+238,DCC0469,Trimidox,-,-,-,-,-,-,-
+239,DCC0470,Citicoline,N06BX06,-,-,N,-,Nervous system,-
+240,DCC0471,Peloruside,-,-,-,-,-,-,-
+241,DCC0472,Ec107fabI,-,-,-,-,-,-,-
+242,DCC0473,HPMA,-,-,-,-,-,-,-
+243,DCC0474,HSV,J05AB01,-,-,J,-,Antiinfectives for systemic use,-
+244,DCC0475,Adenoviral,-,-,-,-,-,-,-
+245,DCC0477,VPR1020,-,-,-,-,-,-,-
+246,DCC0478,NGR-hTNF,-,-,-,-,-,-,-
+247,DCC0480,Interferon,L03AB01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+248,DCC0481,DispersinB,-,-,-,-,-,-,-
+249,DCC0482,IL-27,-,-,-,-,-,-,-
+250,DCC1127,Interferon,L03AB04,L03AB11,-,L,L,Antineoplastic and immunomodulating agents,Antineoplastic and immunomodulating agents
+251,DCC1844,Phenazopyridine,G04BX06,-,-,G,-,Genito-urinary system and sex hormones,-
+252,DCC1845,Phenylpropanolamine,R01BA01,-,-,R,-,Respiratory system,-
+253,DCC1846,Polythiazide,C03AA05,-,-,C,-,Cardiovascular system,-
+254,DCC1840,Metrizoic,V08AA02,-,-,V,-,Various,-
+255,DCC1841,Norethynodrel,-,-,-,-,-,-,-
+256,DCC1842,Pargyline,C02KC01,-,-,C,-,Cardiovascular system,-
+257,DCC1847,Propoxycaine,-,-,-,-,-,-,-
+258,DCC1848,Pyrethrins,-,-,-,-,-,-,-
+259,DCC1849,Pyrilamine,D04AA02,R06AC01,-,D,R,Dermatologicals,Respiratory system
+260,DCC1850,Quinethazone,C03BA02,-,-,C,-,Cardiovascular system,-
+261,DCC1851,Quinupristin,J01FG02,-,-,J,-,Antiinfectives for systemic use,-
+262,DCC1852,Reserpine,C02AA02,-,-,C,-,Cardiovascular system,-
+263,DCC1853,Sulfabenzamide,-,-,-,-,-,-,-
+264,DCC1854,Sulfamerazine,D06BA06,J01ED07,-,D,J,Dermatologicals,Antiinfectives for systemic use
+265,DCC1855,Sulfamethazine,J01EB03,-,-,J,-,Antiinfectives for systemic use,-
+266,DCC1856,Trichlormethiazide,C03AA06,-,-,C,-,Cardiovascular system,-
+267,DCC1857,Trovafloxacin,J01MA13,-,-,J,-,Antiinfectives for systemic use,-
+268,DCC1858,Tyrosine,C02KB01,-,-,C,-,Cardiovascular system,-
+269,DCC1859,Umeclidinium,R03BB07,-,-,R,-,Respiratory system,-
+270,DCC1860,Urea,B05BC02,D02AE01,-,B,D,Blood and blood forming organs,Dermatologicals
+271,DCC1861,Sulfathiazole,D06BA02,J01EB07,-,D,J,Dermatologicals,Antiinfectives for systemic use
+272,DCC0094,Gemcitabine,L01BC05,-,-,L,-,Antineoplastic and immunomodulating agents,-
+273,DCC0095,Betamethasone,A07EA04,C05AA05,D07AC01,A,C,Alimentary tract and metabolism,Cardiovascular system
+274,DCC0096,Epirubicin,L01DB03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+275,DCC0097,Lansoprazole,A02BC03,-,-,A,-,Alimentary tract and metabolism,-
+276,DCC0098,Loratadine,R06AX13,R06AX27,C09AA03,R,R,Respiratory system,Respiratory system
+277,DCC0099,Montelukast,R03DC03,-,-,R,-,Respiratory system,-
+278,DCC0100,Fluoxetine,N06AB03,-,-,N,-,Nervous system,-
+279,DCC0101,Chlordiazepoxide,N05BA02,-,-,N,-,Nervous system,-
+280,DCC0102,Amikacin,D06AX12,J01GB06,S01AA21,D,J,Dermatologicals,Antiinfectives for systemic use
+281,DCC0103,Lenalidomide,L04AX04,-,-,L,-,Antineoplastic and immunomodulating agents,-
+282,DCC0104,Raloxifene,G03XC01,-,-,G,-,Genito-urinary system and sex hormones,-
+283,DCC0116,Dextromethorphan,R05DA09,-,-,R,-,Respiratory system,-
+284,DCC0117,Cisplatin,L01XA01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+285,DCC0118,Albendazole,P02CA03,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+286,DCC0119,Trandolapril,C09AA10,-,-,C,-,Cardiovascular system,-
+287,DCC0120,Oxaliplatin,L01XA03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+288,DCC0121,Lercanidipine,C08CA13,-,-,C,-,Cardiovascular system,-
+289,DCC0122,Erlotinib,L01XE03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+290,DCC0123,Cyclophosphamide,L01AA01,L01DB07,-,L,L,Antineoplastic and immunomodulating agents,Antineoplastic and immunomodulating agents
+291,DCC0124,Ciprofloxacin,J01MA02,S03AA07,S02AA15,J,S,Antiinfectives for systemic use,Sensory organs
+292,DCC0105,Celecoxib,L01XX33,M01AH01,-,L,M,Antineoplastic and immunomodulating agents,Musculo-skeletal system
+293,DCC0106,Brimonidine,S01EA05,-,-,S,-,Sensory organs,-
+294,DCC0107,Pefloxacin,J01MA03,-,-,J,-,Antiinfectives for systemic use,-
+295,DCC0108,Altretamine,L01XX03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+296,DCC0109,Fosinopril,C09AA09,-,-,C,-,Cardiovascular system,-
+297,DCC0110,Entacapone,N04BX02,-,-,N,-,Nervous system,-
+298,DCC0111,Zidovudine,J05AF01,-,-,J,-,Antiinfectives for systemic use,-
+299,DCC0112,Oxycodone,N02AA05,-,-,N,-,Nervous system,-
+300,DCC0113,Cimetidine,A02BA01,-,-,A,-,Alimentary tract and metabolism,-
+301,DCC0114,Ritonavir,J05AE03,-,-,J,-,Antiinfectives for systemic use,-
+302,DCC0115,Vancomycin,A07AA09,J01XA01,-,A,J,Alimentary tract and metabolism,Antiinfectives for systemic use
+303,DCC0067,Vinorelbine,L01CA04,-,-,L,-,Antineoplastic and immunomodulating agents,-
+304,DCC0068,Anidulafungin,J02AX06,-,-,J,-,Antiinfectives for systemic use,-
+305,DCC0069,Clozapine,N05AH02,-,-,N,-,Nervous system,-
+306,DCC0070,Levonorgestrel,G03AC03,G03AD01,-,G,G,Genito-urinary system and sex hormones,Genito-urinary system and sex hormones
+307,DCC0071,Meprobamate,N05BC01,-,-,N,-,Nervous system,-
+308,DCC0072,Timolol,C07AA06,S01ED01,-,C,S,Cardiovascular system,Sensory organs
+309,DCC0073,Amlodipine,C08CA01,-,-,C,-,Cardiovascular system,-
+310,DCC0074,Triamterene,C03DB02,-,-,C,-,Cardiovascular system,-
+311,DCC0075,Phenylephrine,C01CA06,R01AA04,R01AB01,C,R,Cardiovascular system,Respiratory system
+312,DCC0076,Nimodipine,C08CA06,-,-,C,-,Cardiovascular system,-
+313,DCC0077,Beclomethasone,A07EA07,D07AC15,R01AD01,A,D,Alimentary tract and metabolism,Dermatologicals
+314,DCC0078,Carisoprodol,M03BA02,-,-,M,-,Musculo-skeletal system,-
+315,DCC0081,Dexbrompheniramine,R06AB06,-,-,R,-,Respiratory system,-
+316,DCC0082,Rosiglitazone,A10BG02,-,-,A,-,Alimentary tract and metabolism,-
+317,DCC0083,Ampicillin,J01CA01,J01CA02,J01CA06,J,J,Antiinfectives for systemic use,Antiinfectives for systemic use
+318,DCC0079,Sorafenib,L01XE05,-,-,L,-,Antineoplastic and immunomodulating agents,-
+319,DCC0080,Zoledronate,M05BA08,-,-,M,-,Musculo-skeletal system,-
+320,DCC0084,Penicillin,J01CE02,J01CE10,-,J,J,Antiinfectives for systemic use,Antiinfectives for systemic use
+321,DCC0085,Spironolactone,C03DA01,-,-,C,-,Cardiovascular system,-
+322,DCC0086,Methocarbamol,M03BA03,-,-,M,-,Musculo-skeletal system,-
+323,DCC0087,Triprolidine,R06AX07,-,-,R,-,Respiratory system,-
+324,DCC0088,Trifluridine,S01AD02,-,-,S,-,Sensory organs,-
+325,DCC0089,Prochlorperazine,N05AB04,-,-,N,-,Nervous system,-
+326,DCC0090,Bendroflumethiazide,C03AA01,-,-,C,-,Cardiovascular system,-
+327,DCC0091,Ceftazidime,J01DD02,-,-,J,-,Antiinfectives for systemic use,-
+328,DCC0092,Cerivastatin,C10AA06,-,-,C,-,Cardiovascular system,-
+329,DCC0093,Trimethoprim,J01EA01,-,-,J,-,Antiinfectives for systemic use,-
+330,DCC0125,Toremifene,L02BA02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+331,DCC1191,Pravastatin,C10AA03,-,-,C,-,Cardiovascular system,-
+332,DCC1194,Amphetamine,N06BA01,N06BA02,-,N,N,Nervous system,Nervous system
+333,DCC1197,Lorazepam,N05BA06,-,-,N,-,Nervous system,-
+334,DCC1199,Phentermine,A08AA01,-,-,A,-,Alimentary tract and metabolism,-
+335,DCC1200,Fluconazole,D01AC15,J02AC01,-,D,J,Dermatologicals,Antiinfectives for systemic use
+336,DCC1260,Mirtazapine,N06AX11,-,-,N,-,Nervous system,-
+337,DCC1262,Palonosetron,A04AA05,-,-,A,-,Alimentary tract and metabolism,-
+338,DCC1267,Progestrone,G03AC06,G03DA02,L02AB02,G,G,Genito-urinary system and sex hormones,Genito-urinary system and sex hormones
+339,DCC1355,Moexipril,C09AA13,-,-,C,-,Cardiovascular system,-
+340,DCC1356,Phentolamine,C04AB01,V03AB36,-,C,V,Cardiovascular system,Various
+341,DCC1357,Daunorubicin,L01DB02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+342,DCC1417,Dacarbazine,L01AX04,-,-,L,-,Antineoplastic and immunomodulating agents,-
+343,DCC1422,Terbutaline,R03AC03,R03CC03,-,R,R,Respiratory system,Respiratory system
+344,DCC1412,Dobutamine,C01CA07,-,-,C,-,Cardiovascular system,-
+345,DCC1414,Donepezil,N06DA02,-,-,N,-,Nervous system,-
+346,DCC1203,Ticlopidine,B01AC05,-,-,B,-,Blood and blood forming organs,-
+347,DCC1424,Clomifene,G03GB02,-,-,G,-,Genito-urinary system and sex hormones,-
+348,DCC1425,Risedronate,M05BA07,-,-,M,-,Musculo-skeletal system,-
+349,DCC1427,Granisetron,A04AA02,-,-,A,-,Alimentary tract and metabolism,-
+350,DCC1273,Methylphenidate,N06BA04,-,-,N,-,Nervous system,-
+351,DCC1432,Remifentanil,N01AH06,-,-,N,-,Nervous system,-
+352,DCC1433,Ethacrynic,C03CC01,-,-,C,-,Cardiovascular system,-
+353,DCC1434,Ondansetron,A04AA01,-,-,A,-,Alimentary tract and metabolism,-
+354,DCC1436,Zonisamide,N03AX15,-,-,N,-,Nervous system,-
+355,DCC1361,Tamsulosin,G04CA02,-,-,G,-,Genito-urinary system and sex hormones,-
+356,DCC1446,Oxymetazoline,R01AA05,R01AB07,S01GA04,R,R,Respiratory system,Respiratory system
+357,DCC1450,Fulvestrant,L02BA03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+358,DCC1453,Netilmicin,J01GB07,S01AA23,-,J,S,Antiinfectives for systemic use,Sensory organs
+359,DCC1423,Conivaptan,C03XA02,-,-,C,-,Cardiovascular system,-
+360,DCC1455,Pindolol,C07AA03,C07AA14,C07AA17,C,C,Cardiovascular system,Cardiovascular system
+361,DCC1459,Azelastine,R01AC03,R06AX19,S01GX07,R,R,Respiratory system,Respiratory system
+362,DCC1461,Isotretinoin,D10BA01,D10AD04,-,D,D,Dermatologicals,Dermatologicals
+363,DCC1465,Rivastigmine,N06DA03,-,-,N,-,Nervous system,-
+364,DCC1431,Ethanol,D01AE06,D08AX08,V03AB16,D,D,Dermatologicals,Dermatologicals
+365,DCC1471,Busulfan,L01AB01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+366,DCC1473,Cinacalcet,H05BX01,-,-,H,-,"Systemic hormonal preparations, excluding sex hormones and insulins",-
+367,DCC1474,Clobetasol,D07AD01,-,-,D,-,Dermatologicals,-
+368,DCC1437,Paricalcitol,H05BX02,-,-,H,-,"Systemic hormonal preparations, excluding sex hormones and insulins",-
+369,DCC1443,Azacitidine,L01BC07,-,-,L,-,Antineoplastic and immunomodulating agents,-
+370,DCC1444,Colesevelam,C10AC04,-,-,C,-,Cardiovascular system,-
+371,DCC1454,Methylprednisolone,D07AA01,D07AC14,D10AA02,D,D,Dermatologicals,Dermatologicals
+372,DCC1478,Ketoconazole,D01AC08,G01AF11,J02AB02,D,G,Dermatologicals,Genito-urinary system and sex hormones
+373,DCC1479,Tolterodine,G04BD07,-,-,G,-,Genito-urinary system and sex hormones,-
+374,DCC1481,Memantine,N06DX01,-,-,N,-,Nervous system,-
+375,DCC1466,Exemestane,L02BG06,-,-,L,-,Antineoplastic and immunomodulating agents,-
+376,DCC1468,Azathioprine,L04AX01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+377,DCC1486,Isoproterenol,C01CA02,D08AX05,-,C,D,Cardiovascular system,Dermatologicals
+378,DCC1488,Clonazepam,N03AE01,-,-,N,-,Nervous system,-
+379,DCC1477,Mycophenolate,L04AA06,-,-,L,-,Antineoplastic and immunomodulating agents,-
+380,DCC1491,Pilocarpine,N07AX01,S01EB01,-,N,S,Nervous system,Sensory organs
+381,DCC1493,Primaquine,P01BA03,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+382,DCC1494,Fluvastatin,C10AA04,-,-,C,-,Cardiovascular system,-
+383,DCC1445,Tipranavir,J05AE09,-,-,J,-,Antiinfectives for systemic use,-
+384,DCC1500,Cefuroxime,J01DC02,-,-,J,-,Antiinfectives for systemic use,-
+385,DCC1501,Papaverine,A03AD01,G04BE02,-,A,G,Alimentary tract and metabolism,Genito-urinary system and sex hormones
+386,DCC1502,Nifedipine,C08CA05,-,-,C,-,Cardiovascular system,-
+387,DCC1482,Lubiprostone,A06AX03,-,-,A,-,Alimentary tract and metabolism,-
+388,DCC1680,Saxagliptin,A10BH03,-,-,A,-,Alimentary tract and metabolism,-
+389,DCC1681,Pertuzumab,L01XC13,-,-,L,-,Antineoplastic and immunomodulating agents,-
+390,DCC1682,Rilonacept,L04AC04,-,-,L,-,Antineoplastic and immunomodulating agents,-
+391,DCC1684,Ceftaroline,J01DI02,-,-,J,-,Antiinfectives for systemic use,-
+392,DCC1489,Atazanavir,J05AE08,-,-,J,-,Antiinfectives for systemic use,-
+393,DCC1505,Gliclazide,A10BB09,-,-,A,-,Alimentary tract and metabolism,-
+394,DCC1507,Dutasteride,G04CB02,-,-,G,-,Genito-urinary system and sex hormones,-
+395,DCC1508,Bicalutamide,L02BB03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+396,DCC1509,Carvedilol,C07AG02,-,-,C,-,Cardiovascular system,-
+397,DCC1495,Leflunomide,L04AA13,-,-,L,-,Antineoplastic and immunomodulating agents,-
+398,DCC1498,Sertraline,N06AB06,-,-,N,-,Nervous system,-
+399,DCC1503,Trimethaphan,C02BA01,-,-,C,-,Cardiovascular system,-
+400,DCC1686,Apixaban,B01AF02,-,-,B,-,Blood and blood forming organs,-
+401,DCC1687,Bosutinib,L01XE14,-,-,L,-,Antineoplastic and immunomodulating agents,-
+402,DCC1688,Axitinib,L01XE17,-,-,L,-,Antineoplastic and immunomodulating agents,-
+403,DCC1689,Denosumab,M05BX04,-,-,M,-,Musculo-skeletal system,-
+404,DCC1690,Liraglutide,A10BX07,-,-,A,-,Alimentary tract and metabolism,-
+405,DCC1515,Desipramine,N06AA01,-,-,N,-,Nervous system,-
+406,DCC1520,Cilostazol,B01AC23,-,-,B,-,Blood and blood forming organs,-
+407,DCC1521,Itraconazole,J02AC02,-,-,J,-,Antiinfectives for systemic use,-
+408,DCC1522,Procarbazine,L01XB01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+409,DCC1569,Insulin,A10AB06,-,-,A,-,Alimentary tract and metabolism,-
+410,DCC1574,Lithium,N05AN01,D11AX04,-,N,D,Nervous system,Dermatologicals
+411,DCC1577,Calcium,A11GA01,A12AA12,D11AX03,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+412,DCC1696,Desvenlafaxine,N06AX23,-,-,N,-,Nervous system,-
+413,DCC1699,Norelgestromin,G03AA13,-,-,G,-,Genito-urinary system and sex hormones,-
+414,DCC1692,Golimumab,L04AB06,-,-,L,-,Antineoplastic and immunomodulating agents,-
+415,DCC1693,Belatacept,L04AA28,-,-,L,-,Antineoplastic and immunomodulating agents,-
+416,DCC1523,Moclobemide,N06AG02,-,-,N,-,Nervous system,-
+417,DCC1524,Escitalopram,N06AB10,-,-,N,-,Nervous system,-
+418,DCC1525,Idarubicin,L01DB06,-,-,L,-,Antineoplastic and immunomodulating agents,-
+419,DCC1530,Oxymorphone,N02AA11,-,-,N,-,Nervous system,-
+420,DCC1579,Magnesium,A06AD04,A12CC02,B05XA05,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+421,DCC1584,Tiotropium,R03BB04,-,-,R,-,Respiratory system,-
+422,DCC1587,Paromomycin,A07AA06,-,-,A,-,Alimentary tract and metabolism,-
+423,DCC1589,Alfacalcidol,A11CC03,-,-,A,-,Alimentary tract and metabolism,-
+424,DCC1590,Heroin,N02AA09,-,-,N,-,Nervous system,-
+425,DCC1704,Aluminum,A02AB05,-,-,A,-,Alimentary tract and metabolism,-
+426,DCC1705,Calcium,A02AC01,A12AA04,-,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+427,DCC1702,Fosaprepitant,A04AD12,-,-,A,-,Alimentary tract and metabolism,-
+428,DCC1703,Buserelin,L02AE01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+429,DCC1707,Cabazitaxel,L01CD04,-,-,L,-,Antineoplastic and immunomodulating agents,-
+430,DCC1710,Plerixafor,L03AX16,-,-,L,-,Antineoplastic and immunomodulating agents,-
+431,DCC1534,Rifapentine,J04AB05,-,-,J,-,Antiinfectives for systemic use,-
+432,DCC1535,Mitoxantrone,L01DB07,-,-,L,-,Antineoplastic and immunomodulating agents,-
+433,DCC1537,Lomustine,L01AD02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+434,DCC1539,Anastrozole,L02BG03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+435,DCC1541,Quetiapine,N05AH04,-,-,N,-,Nervous system,-
+436,DCC1593,Dextroamphetamine,N06BA02,-,-,N,-,Nervous system,-
+437,DCC1594,Chenodeoxycholic,A05AA02,-,-,A,-,Alimentary tract and metabolism,-
+438,DCC1595,Solifenacin,G04BD08,-,-,G,-,Genito-urinary system and sex hormones,-
+439,DCC1599,Deferasirox,V03AC03,-,-,V,-,Various,-
+440,DCC1601,Hydroxychloroquine,P01BA02,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+441,DCC1613,Prostaglandin,C01EA01,-,-,C,-,Cardiovascular system,-
+442,DCC1719,Ticagrelor,B01AC24,-,-,B,-,Blood and blood forming organs,-
+443,DCC1828,Flurandrenolide,D07AC07,-,-,D,-,Dermatologicals,-
+444,DCC1829,Guanethidine,C02CC02,-,-,C,-,Cardiovascular system,-
+445,DCC1830,Hydroflumethiazide,C03AA02,-,-,C,-,Cardiovascular system,-
+446,DCC1831,Hydroxyamphetamine,-,-,-,-,-,-,-
+447,DCC1833,Isopropyl,D08AX05,-,-,D,-,Dermatologicals,-
+448,DCC1834,Magnesium,A12CC02,-,-,A,-,Alimentary tract and metabolism,-
+449,DCC1836,Mequinol,D11AX06,-,-,D,-,Dermatologicals,-
+450,DCC1542,Enoxaparin,B01AB01,B01AB05,-,B,B,Blood and blood forming organs,Blood and blood forming organs
+451,DCC1545,Metoclopramide,A03FA01,-,-,A,-,Alimentary tract and metabolism,-
+452,DCC1546,Aripiprazole,N05AX12,-,-,N,-,Nervous system,-
+453,DCC1614,Terlipressin,H01BA04,-,-,H,-,"Systemic hormonal preparations, excluding sex hormones and insulins",-
+454,DCC1615,Niacinamide,A11HA01,-,-,A,-,Alimentary tract and metabolism,-
+455,DCC1622,1-propanol,C07AA05,-,-,C,-,Cardiovascular system,-
+456,DCC1624,Uracil,-,-,-,-,-,-,-
+457,DCC1625,Deoxycholate,D11AX24,-,-,D,-,Dermatologicals,-
+458,DCC1628,Fotemustine,L01AD05,-,-,L,-,Antineoplastic and immunomodulating agents,-
+459,DCC1637,Maraviroc,J05AX09,-,-,J,-,Antiinfectives for systemic use,-
+460,DCC1639,Ixabepilone,L01DC04,-,-,L,-,Antineoplastic and immunomodulating agents,-
+461,DCC1641,Nebivolol,C07AB12,-,-,C,-,Cardiovascular system,-
+462,DCC1726,Pitavastatin,C10AA08,-,-,C,-,Cardiovascular system,-
+463,DCC1727,Rilpivirine,J05AG05,-,-,J,-,Antiinfectives for systemic use,-
+464,DCC1728,Brentuximab,L01XC12,-,-,L,-,Antineoplastic and immunomodulating agents,-
+465,DCC1733,Teriflunomide,L04AA31,-,-,L,-,Antineoplastic and immunomodulating agents,-
+466,DCC1736,Aflibercept,S01LA05,-,-,S,-,Sensory organs,-
+467,DCC1737,Carfilzomib,L01XX45,-,-,L,-,Antineoplastic and immunomodulating agents,-
+468,DCC1722,Azilsartan,C09CA09,-,-,C,-,Cardiovascular system,-
+469,DCC1723,Deferiprone,V03AC02,-,-,V,-,Various,-
+470,DCC1548,Clomipramine,N06AA04,-,-,N,-,Nervous system,-
+471,DCC1551,Lisdexamfetamine,N06BA12,-,-,N,-,Nervous system,-
+472,DCC1552,Darunavir,J05AE10,-,-,J,-,Antiinfectives for systemic use,-
+473,DCC1555,Panitumumab,L01XC08,-,-,L,-,Antineoplastic and immunomodulating agents,-
+474,DCC1644,Voglibose,A10BF03,-,-,A,-,Alimentary tract and metabolism,-
+475,DCC1648,Thymalfasin,-,-,-,-,-,-,-
+476,DCC1649,Defibrotide,B01AX01,-,-,B,-,Blood and blood forming organs,-
+477,DCC1657,Vandetanib,L01XE12,-,-,L,-,Antineoplastic and immunomodulating agents,-
+478,DCC1740,Bedaquiline,J04AK05,-,-,J,-,Antiinfectives for systemic use,-
+479,DCC1742,Fluticasone,R01AD12,-,-,R,-,Respiratory system,-
+480,DCC1743,Canagliflozin,A10BX11,-,-,A,-,Alimentary tract and metabolism,-
+481,DCC1744,Dimethyl,L04AX07,-,-,L,-,Antineoplastic and immunomodulating agents,-
+482,DCC1745,Pomalidomide,L04AX06,-,-,L,-,Antineoplastic and immunomodulating agents,-
+483,DCC1556,Ranibizumab,S01LA04,-,-,S,-,Sensory organs,-
+484,DCC1559,Arformoterol,R03AC13,-,-,R,-,Respiratory system,-
+485,DCC1560,Exenatide,A10BX04,-,-,A,-,Alimentary tract and metabolism,-
+486,DCC1561,Iplex,H01AC03,-,-,H,-,"Systemic hormonal preparations, excluding sex hormones and insulins",-
+487,DCC1658,Telaprevir,J05AE11,-,-,J,-,Antiinfectives for systemic use,-
+488,DCC1659,Sodium,P01CB02,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+489,DCC1661,Teicoplanin,J01XA02,-,-,J,-,Antiinfectives for systemic use,-
+490,DCC1662,Acetylcysteine,R05CB01,S01XA08,V03AB23,R,S,Respiratory system,Sensory organs
+491,DCC1664,Canakinumab,L04AC08,-,-,L,-,Antineoplastic and immunomodulating agents,-
+492,DCC1749,Isophane,A10AB01,-,-,A,-,Alimentary tract and metabolism,-
+493,DCC1755,LMWH,B01AB05,-,-,B,-,Blood and blood forming organs,-
+494,DCC1772,Pegylated,L03AB10,-,-,L,-,Antineoplastic and immunomodulating agents,-
+495,DCC1775,Recombinant,-,-,-,-,-,-,-
+496,DCC1781,RHpDGF-BB,-,-,-,-,-,-,-
+497,DCC1810,Azatadine,R06AX09,-,-,R,-,Respiratory system,-
+498,DCC1811,Betaxolol,C07AB05,S01ED02,-,C,S,Cardiovascular system,Sensory organs
+499,DCC1812,Bromodiphenhydramine,R06AA01,-,-,R,-,Respiratory system,-
+500,DCC1813,Chloramphenicol,D06AX02,D10AF03,G01AA05,D,D,Dermatologicals,Dermatologicals
+501,DCC1564,Abatacept,L04AA24,-,-,L,-,Antineoplastic and immunomodulating agents,-
+502,DCC1567,Insulin,A10AD05,A10AB05,-,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+503,DCC1666,Prasugrel,B01AC22,-,-,B,-,Blood and blood forming organs,-
+504,DCC1676,Tocilizumab,L04AC07,-,-,L,-,Antineoplastic and immunomodulating agents,-
+505,DCC1677,Teriparatide,H05AA02,-,-,H,-,"Systemic hormonal preparations, excluding sex hormones and insulins",-
+506,DCC1678,Temsirolimus,L01XE09,-,-,L,-,Antineoplastic and immunomodulating agents,-
+507,DCC1679,Amisulpride,N05AL05,-,-,N,-,Nervous system,-
+508,DCC1814,Chlorothiazide,C03AA04,-,-,C,-,Cardiovascular system,-
+509,DCC1815,Dalfopristin,J01FG02,-,-,J,-,Antiinfectives for systemic use,-
+510,DCC1816,Deserpidine,C02AA05,-,-,C,-,Cardiovascular system,-
+511,DCC1817,Desoxyribonuclease,R05CB13,-,-,R,-,Respiratory system,-
+512,DCC1819,Difenoxin,A07DA04,-,-,A,-,Alimentary tract and metabolism,-
+513,DCC1820,Dihydroergotamine,N02CA01,-,-,N,-,Nervous system,-
+514,DCC1822,Edrophonium,V04CX07,-,-,V,-,Various,-
+515,DCC1823,Estradiol,G03CA03,-,-,G,-,Genito-urinary system and sex hormones,-
+516,DCC1824,"Estrogens,",G03FB05,-,-,G,-,Genito-urinary system and sex hormones,-
+517,DCC1825,Etidocaine,N01BB07,-,-,N,-,Nervous system,-
+518,DCC1826,Ferrous,B03AA02,B03AD02,-,B,B,Blood and blood forming organs,Blood and blood forming organs
+519,DCC1827,Fibrinolysin,B01AD05,-,-,B,-,Blood and blood forming organs,-
+520,DCC1129,Palifermin,V03AF08,-,-,V,-,Various,-
+521,DCC1131,Omalizumab,R03DX05,-,-,R,-,Respiratory system,-
+522,DCC1132,Humalog,A10AB04,A10AC04,A10AD04,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+523,DCC1204,Trospium,G04BD09,-,-,G,-,Genito-urinary system and sex hormones,-
+524,DCC1205,Midodrine,C01CA17,-,-,C,-,Cardiovascular system,-
+525,DCC1207,Citalopram,N06AB04,N06AB10,-,N,N,Nervous system,Nervous system
+526,DCC1208,Moxifloxacin,J01MA14,S01AE07,-,J,S,Antiinfectives for systemic use,Sensory organs
+527,DCC1209,Nelfinavir,J05AE04,-,-,J,-,Antiinfectives for systemic use,-
+528,DCC1280,Entecavir,J05AF10,-,-,J,-,Antiinfectives for systemic use,-
+529,DCC1282,Droperidol,N05AD08,-,-,N,-,Nervous system,-
+530,DCC1284,Meperidine,N02AB02,-,-,N,-,Nervous system,-
+531,DCC1285,Prazosin,C02CA01,-,-,C,-,Cardiovascular system,-
+532,DCC1363,Ibandronate,M05BA06,-,-,M,-,Musculo-skeletal system,-
+533,DCC1365,Oxacillin,J01CF05,J01CF01,J01CF02,J,J,Antiinfectives for systemic use,Antiinfectives for systemic use
+534,DCC1367,Paroxetine,N06AB05,-,-,N,-,Nervous system,-
+535,DCC1368,Adefovir,J05AF08,-,-,J,-,Antiinfectives for systemic use,-
+536,DCC1133,Insulin,A10AE04,-,-,A,-,Alimentary tract and metabolism,-
+537,DCC1135,Cetrorelix,H01CC02,-,-,H,-,"Systemic hormonal preparations, excluding sex hormones and insulins",-
+538,DCC1136,Somatropin,H01AC01,-,-,H,-,"Systemic hormonal preparations, excluding sex hormones and insulins",-
+539,DCC1137,Abciximab,B01AC13,-,-,B,-,Blood and blood forming organs,-
+540,DCC1210,Pregabalin,N03AX16,-,-,N,-,Nervous system,-
+541,DCC1218,Ziprasidone,N05AE04,-,-,N,-,Nervous system,-
+542,DCC1221,Doxycycline,A01AB22,J01AA02,-,A,J,Alimentary tract and metabolism,Antiinfectives for systemic use
+543,DCC1224,Carmustine,L01AD01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+544,DCC1288,Verteporfin,S01LA01,-,-,S,-,Sensory organs,-
+545,DCC1293,Duloxetine,N06AX21,-,-,N,-,Nervous system,-
+546,DCC1297,Cefotaxime,J01DD01,-,-,J,-,Antiinfectives for systemic use,-
+547,DCC1301,Norgestrel,G03FB01,-,-,G,-,Genito-urinary system and sex hormones,-
+548,DCC1302,Nitazoxanide,P01AX11,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+549,DCC1370,Procaine,C01BA02,C05AD05,D04AB03,C,C,Cardiovascular system,Cardiovascular system
+550,DCC1372,Nitroglycerin,C01DA02,-,-,C,-,Cardiovascular system,-
+551,DCC1374,Nateglinide,A10BX03,-,-,A,-,Alimentary tract and metabolism,-
+552,DCC1376,Risperidoene,N05AX08,-,-,N,-,Nervous system,-
+553,DCC1377,Esomeprazole,A02BC01,A02BC05,-,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+554,DCC1138,Gemtuzumab,L01FX02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+555,DCC1140,Interferon,L04AA23,L03AB07,-,L,L,Antineoplastic and immunomodulating agents,Antineoplastic and immunomodulating agents
+556,DCC1142,Eptifibatide,B01AC16,-,-,B,-,Blood and blood forming organs,-
+557,DCC1143,Infliximab,L04AA12,L04AB02,-,L,L,Antineoplastic and immunomodulating agents,Antineoplastic and immunomodulating agents
+558,DCC1144,Follitropin,G03GA06,-,-,G,-,Genito-urinary system and sex hormones,-
+559,DCC1145,Vasopressin,H01BA01,-,-,H,-,"Systemic hormonal preparations, excluding sex hormones and insulins",-
+560,DCC1227,Argatroban,B01AE03,-,-,B,-,Blood and blood forming organs,-
+561,DCC1231,Venlafaxine,N06AX16,N06AX23,-,N,N,Nervous system,Nervous system
+562,DCC1234,Bleomycin,L01DC01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+563,DCC1235,Chlorambucil,L01AA02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+564,DCC1238,Ropivacaine,N01BB09,-,-,N,-,Nervous system,-
+565,DCC1314,Methoxsalen,D05AD02,D05BA02,-,D,D,Dermatologicals,Dermatologicals
+566,DCC1321,Vinblastine,L01CA01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+567,DCC1328,Labetalol,C07AG01,-,-,C,-,Cardiovascular system,-
+568,DCC1329,Thiopental,N01AF03,N05CA19,-,N,N,Nervous system,Nervous system
+569,DCC1330,Ivermectin,P02CF01,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+570,DCC1380,Riluzole,N07XX02,-,-,N,-,Nervous system,-
+571,DCC1381,Mannitol,A06AD16,B05BC01,B05CX04,A,B,Alimentary tract and metabolism,Blood and blood forming organs
+572,DCC1384,Deferoxamine,V03AC01,-,-,V,-,Various,-
+573,DCC1386,Etodolac,M01AB08,-,-,M,-,Musculo-skeletal system,-
+574,DCC1161,Anti-thymocyte,L04AA04,-,-,L,-,Antineoplastic and immunomodulating agents,-
+575,DCC1162,Filgrastim,L03AA02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+576,DCC1164,Octreotide,H01CB02,-,-,H,-,"Systemic hormonal preparations, excluding sex hormones and insulins",-
+577,DCC1165,Interferon,L03AB05,L03AB10,-,L,L,Antineoplastic and immunomodulating agents,Antineoplastic and immunomodulating agents
+578,DCC1149,Basiliximab,L04AC02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+579,DCC1160,Pregnyl,G03GA08,-,-,G,-,Genito-urinary system and sex hormones,-
+580,DCC1239,Floxacillin,J01CF05,-,-,J,-,Antiinfectives for systemic use,-
+581,DCC1240,Ertapenem,J01DH03,-,-,J,-,Antiinfectives for systemic use,-
+582,DCC1241,Desogestrel,G03AC09,-,-,G,-,Genito-urinary system and sex hormones,-
+583,DCC1242,Bexarotene,L01XX25,-,-,L,-,Antineoplastic and immunomodulating agents,-
+584,DCC1332,Nafcillin,J01CF06,-,-,J,-,Antiinfectives for systemic use,-
+585,DCC1333,Chloroquine,P01BA01,P01BA02,-,P,P,"Antiparasitic products, insecticides and repellents","Antiparasitic products, insecticides and repellents"
+586,DCC1334,Furazolidone,G01AX06,-,-,G,-,Genito-urinary system and sex hormones,-
+587,DCC1335,Methyltestosterone,G03BA02,G03EK01,-,G,G,Genito-urinary system and sex hormones,Genito-urinary system and sex hormones
+588,DCC1390,Clopidogrel,B01AC04,-,-,B,-,Blood and blood forming organs,-
+589,DCC1393,Mometasone,D07AC13,D07XC03,R01AD09,D,D,Dermatologicals,Dermatologicals
+590,DCC1395,Alprostadil,C01EA01,G04BE01,-,C,G,Cardiovascular system,Genito-urinary system and sex hormones
+591,DCC1177,Succinate,B03AA06,-,-,B,-,Blood and blood forming organs,-
+592,DCC1181,Creatine,C01EB06,-,-,C,-,Cardiovascular system,-
+593,DCC1166,Oxytocin,H01BB01,H01BB02,-,H,H,"Systemic hormonal preparations, excluding sex hormones and insulins","Systemic hormonal preparations, excluding sex hormones and insulins"
+594,DCC1172,Arginine,B05XB01,-,-,B,-,Blood and blood forming organs,-
+595,DCC1246,Fluorometholone,C05AA06,D07AB06,D07XB04,C,D,Cardiovascular system,Dermatologicals
+596,DCC1247,Hydromorphone,N02AA03,-,-,N,-,Nervous system,-
+597,DCC1244,Pentobarbital,N05CA01,-,-,N,-,Nervous system,-
+598,DCC1245,Floxuridine,L01BC09,-,-,L,-,Antineoplastic and immunomodulating agents,-
+599,DCC1336,Alendronate,M05BA04,-,-,M,-,Musculo-skeletal system,-
+600,DCC1338,Adenosine,C01EB10,-,-,C,-,Cardiovascular system,-
+601,DCC1339,Mebendazole,P02CA01,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+602,DCC1345,Acamprosate,N07BB03,-,-,N,-,Nervous system,-
+603,DCC1396,Tirofiban,B01AC17,-,-,B,-,Blood and blood forming organs,-
+604,DCC1399,Sulfasalazine,A07EC01,-,-,A,-,Alimentary tract and metabolism,-
+605,DCC1400,Tazarotene,D05AX05,-,-,D,-,Dermatologicals,-
+606,DCC1407,Tadalafil,G04BE08,-,-,G,-,Genito-urinary system and sex hormones,-
+607,DCC1411,Mifepristone,G03XB01,-,-,G,-,Genito-urinary system and sex hormones,-
+608,DCC1182,Vitamin,A11CC01,-,-,A,-,Alimentary tract and metabolism,-
+609,DCC1183,Folic,B03BB01,-,-,B,-,Blood and blood forming organs,-
+610,DCC1188,Pyridoxine,A11HA02,-,-,A,-,Alimentary tract and metabolism,-
+611,DCC1249,Pimecrolimus,D11AH02,-,-,D,-,Dermatologicals,-
+612,DCC1252,Clobazam,N05BA09,-,-,N,-,Nervous system,-
+613,DCC1256,Sulfadiazine,D06BA01,J01EC02,-,D,J,Dermatologicals,Antiinfectives for systemic use
+614,DCC1258,Doxylamine,R06AA09,-,-,R,-,Respiratory system,-
+615,DCC1259,Norepinephrine,C01CA03,-,-,C,-,Cardiovascular system,-
+616,DCC1347,Sulfalene,J01ED02,QJ01EQ19,-,J,Q,Antiinfectives for systemic use,-
+617,DCC1351,Aprepitant,A04AD12,-,-,A,-,Alimentary tract and metabolism,-
+618,DCC1353,Midazolam,N05CD08,-,-,N,-,Nervous system,-
+619,DCC1354,Fludrocortisone,H02AA02,-,-,H,-,"Systemic hormonal preparations, excluding sex hormones and insulins",-
+620,DCC0152,Niacin,C04AC01,C10AD02,-,C,C,Cardiovascular system,Cardiovascular system
+621,DCC0153,Clofarabine,L01BB06,-,-,L,-,Antineoplastic and immunomodulating agents,-
+622,DCC0154,Dexmedetomidine,N05CM18,-,-,N,-,Nervous system,-
+623,DCC0155,Sulfacetamide,S01AB04,-,-,S,-,Sensory organs,-
+624,DCC0184,Hydrocortisone,A01AC03,A07EA02,C05AA01,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+625,DCC0185,Prilocaine,N01BB04,-,-,N,-,Nervous system,-
+626,DCC0186,Tretinoin,D10AD01,D10AD51,L01XX14,D,D,Dermatologicals,Dermatologicals
+627,DCC0213,Perphenazine,N05AB03,-,-,N,-,Nervous system,-
+628,DCC0214,Pseudoephedrine,R01BA02,-,-,R,-,Respiratory system,-
+629,DCC0215,Temozolomide,L01AX03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+630,DCC0240,Aspirin,A01AD05,B01AC06,N02BA01,A,B,Alimentary tract and metabolism,Blood and blood forming organs
+631,DCC0241,Fexofenadine,R06AX26,-,-,R,-,Respiratory system,-
+632,DCC0242,Isoniazid,J04AC01,-,-,J,-,Antiinfectives for systemic use,-
+633,DCC0362,Fusidic,D09AA02,D06AX01,S01AA13,D,D,Dermatologicals,Dermatologicals
+634,DCC0156,Prednisone,A07EA03,H02AB07,H02AB15,A,H,Alimentary tract and metabolism,"Systemic hormonal preparations, excluding sex hormones and insulins"
+635,DCC0244,Norgestimate,G03AA11,-,-,G,-,Genito-urinary system and sex hormones,-
+636,DCC0245,Carboplatin,L01XA02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+637,DCC0187,Tetracycline,J01AA07,-,-,J,-,Antiinfectives for systemic use,-
+638,DCC0247,Telmisartan,C09CA07,-,-,C,-,Cardiovascular system,-
+639,DCC0248,Desloratadine,R06AX27,-,-,R,-,Respiratory system,-
+640,DCC0249,Methyldopa,C02AB01,C02AB02,-,C,C,Cardiovascular system,Cardiovascular system
+641,DCC0216,Prednisolone,A07EA01,C05AA04,D07AA01,A,C,Alimentary tract and metabolism,Cardiovascular system
+642,DCC0251,Dipyridamole,B01AC07,C01DX20,-,B,C,Blood and blood forming organs,Cardiovascular system
+643,DCC0252,Ethinyl,G03CA01,-,-,G,-,Genito-urinary system and sex hormones,-
+644,DCC0253,Lomefloxacin,J01MA07,S01AE04,-,J,S,Antiinfectives for systemic use,Sensory organs
+645,DCC0243,Hydrocodone,R05DA03,-,-,R,-,Respiratory system,-
+646,DCC0255,Formoterol,R03AC13,-,-,R,-,Respiratory system,-
+647,DCC0256,Cytarabine,L01BC01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+648,DCC0246,Mepivacaine,N01BB03,-,-,N,-,Nervous system,-
+649,DCC0259,Doxorubicin,L01DB01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+650,DCC0260,Hydrochlorothiazide,C03AA03,-,-,C,-,Cardiovascular system,-
+651,DCC0250,Ezetimibe,C10AX09,-,-,C,-,Cardiovascular system,-
+652,DCC0262,Ganciclovir,J05AB06,J05AB14,S01AD09,J,J,Antiinfectives for systemic use,Antiinfectives for systemic use
+653,DCC0263,Hydroxyurea,L01XX05,-,-,L,-,Antineoplastic and immunomodulating agents,-
+654,DCC0264,Letrozole,L02BG04,-,-,L,-,Antineoplastic and immunomodulating agents,-
+655,DCC0254,Cyclopentolate,S01FA04,-,-,S,-,Sensory organs,-
+656,DCC0266,Sulfamethoxazole,J01EC01,-,-,J,-,Antiinfectives for systemic use,-
+657,DCC0267,Glyburide,A10BB01,-,-,A,-,Alimentary tract and metabolism,-
+658,DCC0268,Minocycline,A01AB23,J01AA08,-,A,J,Alimentary tract and metabolism,Antiinfectives for systemic use
+659,DCC0257,Neomycin,A01AB08,A07AA01,B05CA09,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+660,DCC0258,Gabapentin,N03AX12,-,-,N,-,Nervous system,-
+661,DCC0270,Irbesartan,C09CA04,-,-,C,-,Cardiovascular system,-
+662,DCC0261,Salbutamol,R03CC02,R03AC02,-,R,R,Respiratory system,Respiratory system
+663,DCC0273,Mercaptopurine,L01BB02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+664,DCC0274,Cerulenin,-,-,-,-,-,-,-
+665,DCC0275,Procainamide,C01BA02,-,-,C,-,Cardiovascular system,-
+666,DCC0276,Fenofibrate,C10AB05,-,-,C,-,Cardiovascular system,-
+667,DCC0265,Ketoprofen,M01AE03,M01AE17,M02AA10,M,M,Musculo-skeletal system,Musculo-skeletal system
+668,DCC0278,Melphalan,L01AA03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+669,DCC0279,Gatifloxacin,J01MA16,S01AE06,-,J,S,Antiinfectives for systemic use,Sensory organs
+670,DCC0280,Rifampin,J04AB02,-,-,J,-,Antiinfectives for systemic use,-
+671,DCC0281,Abacavir,J05AF06,-,-,J,-,Antiinfectives for systemic use,-
+672,DCC0269,Felodipine,C08CA02,-,-,C,-,Cardiovascular system,-
+673,DCC0283,Nitrendipine,C08CA08,-,-,C,-,Cardiovascular system,-
+674,DCC0284,Praziquantel,P02BA01,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+675,DCC0271,Topotecan,L01XX17,-,-,L,-,Antineoplastic and immunomodulating agents,-
+676,DCC0272,Probenecid,M04AB01,-,-,M,-,Musculo-skeletal system,-
+677,DCC0286,Glipizide,A10BB07,-,-,A,-,Alimentary tract and metabolism,-
+678,DCC0287,Promethazine,D04AA10,R06AD02,R06AD05,D,R,Dermatologicals,Respiratory system
+679,DCC0277,Thalidomide,L04AX02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+680,DCC0344,Cefepime,J01DE01,-,-,J,-,Antiinfectives for systemic use,-
+681,DCC0345,Gamma,N01AX11,N07XX04,-,N,N,Nervous system,Nervous system
+682,DCC0346,Dihydrocodeine,N02AA08,-,-,N,-,Nervous system,-
+683,DCC0282,Ibuprofen,C01EB16,G02CC01,M01AE01,C,G,Cardiovascular system,Genito-urinary system and sex hormones
+684,DCC0289,Diphenhydramine,D04AA32,D04AA33,R06AA02,D,D,Dermatologicals,Dermatologicals
+685,DCC0290,Atorvastatin,C10AA05,-,-,C,-,Cardiovascular system,-
+686,DCC0291,Diphenoxylate,A07DA01,-,-,A,-,Alimentary tract and metabolism,-
+687,DCC0285,Amoxicillin,J01CA04,-,-,J,-,Antiinfectives for systemic use,-
+688,DCC0318,Clarithromycin,J01FA09,-,-,J,-,Antiinfectives for systemic use,-
+689,DCC0319,Ceftriaxone,J01DD04,-,-,J,-,Antiinfectives for systemic use,-
+690,DCC0288,Fludarabine,L01BB05,-,-,L,-,Antineoplastic and immunomodulating agents,-
+691,DCC0347,Methamphetamine,N06BA03,-,-,N,-,Nervous system,-
+692,DCC0348,Everolimus,L04AA18,L01XE10,-,L,L,Antineoplastic and immunomodulating agents,Antineoplastic and immunomodulating agents
+693,DCC0349,Cilastatin,J01DH51,-,-,J,-,Antiinfectives for systemic use,-
+694,DCC0350,Imipenem,J01DH,-,-,J,-,Antiinfectives for systemic use,-
+695,DCC0351,Lopinavir,J05AR10,-,-,J,-,Antiinfectives for systemic use,-
+696,DCC0294,Rosuvastatin,C10AA07,-,-,C,-,Cardiovascular system,-
+697,DCC0292,Streptomycin,A07AA04,J01GA01,S01AA15,A,J,Alimentary tract and metabolism,Antiinfectives for systemic use
+698,DCC0293,Iloprost,B01AC11,-,-,B,-,Blood and blood forming organs,-
+699,DCC0320,Ketamine,N01AX03,N01AX14,-,N,N,Nervous system,Nervous system
+700,DCC0321,Budesonide,A07EA06,D07AC09,R01AD05,A,D,Alimentary tract and metabolism,Dermatologicals
+701,DCC0322,Aminophylline,R03DA05,-,-,R,-,Respiratory system,-
+702,DCC0323,Paclitaxel,L01CD01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+703,DCC0354,Pheniramine,R06AB05,-,-,R,-,Respiratory system,-
+704,DCC0355,Genistein,-,-,-,-,-,-,-
+705,DCC0357,LG100268,-,-,-,-,-,-,-
+706,DCC0358,Calcipotriol,D05AX02,-,-,D,-,Dermatologicals,-
+707,DCC0352,Tazobactam,J01CG02,-,-,J,-,Antiinfectives for systemic use,-
+708,DCC0353,Ticarcillin,J01CA13,-,-,J,-,Antiinfectives for systemic use,-
+709,DCC0360,"""2'-Deoxyinosine""",-,-,-,-,-,-,-
+710,DCC0361,Vorinostat,L01XX38,-,-,L,-,Antineoplastic and immunomodulating agents,-
+711,DCC0363,17-DMAG,-,-,-,-,-,-,-
+712,DCC0295,Capecitabine,L01BC06,-,-,L,-,Antineoplastic and immunomodulating agents,-
+713,DCC0296,Heparin,B01AB01,C05BA01,C05BA03,B,C,Blood and blood forming organs,Cardiovascular system
+714,DCC0297,Miconazole,A01AB09,A07AC01,D01AC02,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+715,DCC0324,Saquinavir,J05AE01,-,-,J,-,Antiinfectives for systemic use,-
+716,DCC0325,Dexamethasone,A01AC02,C05AA09,D07AB19,A,C,Alimentary tract and metabolism,Cardiovascular system
+717,DCC0326,Levodopa,N04BA01,N04BA04,-,N,N,Nervous system,Nervous system
+718,DCC0327,Sevoflurane,N01AB08,-,-,N,-,Nervous system,-
+719,DCC0366,Eucalyptol,R05CA13,-,-,R,-,Respiratory system,-
+720,DCC0367,Fenretinide,-,-,-,-,-,-,-
+721,DCC0364,Flavopiridol,-,-,-,-,-,-,-
+722,DCC0365,Epigallocatechin,D06BB12,-,-,D,-,Dermatologicals,-
+723,DCC0368,Clioquinol,P01AA02,D08AH30,S02AA05,P,D,"Antiparasitic products, insecticides and repellents",Dermatologicals
+724,DCC0369,Trabectedin,L01CX01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+725,DCC0370,Glatiramer,L03AX13,-,-,L,-,Antineoplastic and immunomodulating agents,-
+726,DCC0371,Alogliptin,A10BH04,-,-,A,-,Alimentary tract and metabolism,-
+727,DCC0300,Diazoxide,C02DA01,V03AH01,-,C,V,Cardiovascular system,Various
+728,DCC0301,Rabeprazole,A02BC04,-,-,A,-,Alimentary tract and metabolism,-
+729,DCC0302,Proguanil,P01BB01,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+730,DCC0298,Chlorpheniramine,R06AB02,R06AB04,-,R,R,Respiratory system,Respiratory system
+731,DCC0299,Atovaquone,P01AX06,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+732,DCC0328,Gemfibrozil,C10AB04,-,-,C,-,Cardiovascular system,-
+733,DCC0329,Docetaxel,L01CD02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+734,DCC0330,Dasatinib,L01XE06,-,-,L,-,Antineoplastic and immunomodulating agents,-
+735,DCC0331,Aliskiren,C09XA02,-,-,C,-,Cardiovascular system,-
+736,DCC0372,Artemether,P01BE02,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+737,DCC0404,Arzoxifene,-,-,-,-,-,-,-
+738,DCC0405,Ravuconazole,D01BA03,-,-,D,-,Dermatologicals,-
+739,DCC0406,Roscovitine,-,-,-,-,-,-,-
+740,DCC0407,PA-824,J04AK08,-,-,J,-,Antiinfectives for systemic use,-
+741,DCC0408,Endomorphin-1,-,-,-,-,-,-,-
+742,DCC0409,RPR-115135,-,-,-,-,-,-,-
+743,DCC0410,Tipifarnib,-,-,-,-,-,-,-
+744,DCC0411,Lomeguatrib,-,-,-,-,-,-,-
+745,DCC0412,Lonafarnib,A16AX20,-,-,A,-,Alimentary tract and metabolism,-
+746,DCC0303,Pioglitazone,A10BG03,-,-,A,-,Alimentary tract and metabolism,-
+747,DCC0304,Levofloxacin,J01MA12,S01AE05,-,J,S,Antiinfectives for systemic use,Sensory organs
+748,DCC0305,Gemifloxacin,J01MA15,-,-,J,-,Antiinfectives for systemic use,-
+749,DCC0306,Bupropion,N06AX12,-,-,N,-,Nervous system,-
+750,DCC0307,Trimetrexate,P01AX07,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+751,DCC0332,Lapatinib,L01XE07,-,-,L,-,Antineoplastic and immunomodulating agents,-
+752,DCC0333,Sitagliptin,A10BH01,-,-,A,-,Alimentary tract and metabolism,-
+753,DCC0334,Decitabine,L01BC08,-,-,L,-,Antineoplastic and immunomodulating agents,-
+754,DCC0375,Naphazoline,R01AA08,S01GA01,R01AB02,R,S,Respiratory system,Sensory organs
+755,DCC0376,Triclosan,D08AE04,-,-,D,-,Dermatologicals,-
+756,DCC0377,Antazoline,R01AC04,-,-,R,-,Respiratory system,-
+757,DCC0378,Fingolimod,L04AA27,-,-,L,-,Antineoplastic and immunomodulating agents,-
+758,DCC0373,Levonordefrin,-,-,-,-,-,-,-
+759,DCC0374,Lumefantrine,P01BF01,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+760,DCC0379,Sodium,A12CA01,-,-,A,-,Alimentary tract and metabolism,-
+761,DCC0308,Arsenic,L01XX27,-,-,L,-,Antineoplastic and immunomodulating agents,-
+762,DCC0309,Kanamycin,A07AA08,J01GB04,S01AA24,A,J,Alimentary tract and metabolism,Antiinfectives for systemic use
+763,DCC0310,Orphenadrine,M03BC01,N04AB02,-,M,N,Musculo-skeletal system,Nervous system
+764,DCC0311,Ifosfamide,L01AA06,-,-,L,-,Antineoplastic and immunomodulating agents,-
+765,DCC0335,Posaconazole,J02AC04,-,-,J,-,Antiinfectives for systemic use,-
+766,DCC0336,Sunitinib,L01XE04,-,-,L,-,Antineoplastic and immunomodulating agents,-
+767,DCC0337,Hydralazine,C02DB02,C02DB01,-,C,C,Cardiovascular system,Cardiovascular system
+768,DCC0338,Bismuth,A02BA07,A02BX05,A02BX12,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+769,DCC0380,U0126,A12CA01,-,-,A,-,Alimentary tract and metabolism,-
+770,DCC0381,3-BROP,-,-,-,-,-,-,-
+771,DCC0382,Sodium,A12CA01,-,-,A,-,Alimentary tract and metabolism,-
+772,DCC0383,Tribendimidine,-,-,-,-,-,-,-
+773,DCC0384,L744832,-,-,-,-,-,-,-
+774,DCC0385,Lafutidine,A02BA08,-,-,A,-,Alimentary tract and metabolism,-
+775,DCC0386,Midostaurin,L01EX10,-,-,L,-,Antineoplastic and immunomodulating agents,-
+776,DCC0387,Arsenic,L01XX27,-,-,L,-,Antineoplastic and immunomodulating agents,-
+777,DCC0388,Hydroquinone,D11AX11,-,-,D,-,Dermatologicals,-
+778,DCC0389,Discodermolide,-,-,-,-,-,-,-
+779,DCC0390,Depsipeptide,L01XX39,-,-,L,-,Antineoplastic and immunomodulating agents,-
+780,DCC0391,Magnesium,A12CC02,-,-,A,-,Alimentary tract and metabolism,-
+781,DCC0392,BQ-123,-,-,-,-,-,-,-
+782,DCC0393,Scopadulciol,-,-,-,-,-,-,-
+783,DCC0312,Naloxone,V03AB15,-,-,V,-,Various,-
+784,DCC0313,Clindamycin,D10AF01,G01AA10,J01FF01,D,G,Dermatologicals,Genito-urinary system and sex hormones
+785,DCC0314,Brinzolamide,S01EC04,-,-,S,-,Sensory organs,-
+786,DCC0339,Sulfadoxine,P01BF09,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+787,DCC0340,Mestranol,-,-,-,-,-,-,-
+788,DCC0341,Sodium,B05XA02,B05CB04,-,B,B,Blood and blood forming organs,Blood and blood forming organs
+789,DCC0342,Colchicine,M04AC01,-,-,M,-,Musculo-skeletal system,-
+790,DCC0343,Drospirenone,-,-,-,-,-,-,-
+791,DCC0394,Aplidine,-,-,-,-,-,-,-
+792,DCC0395,Pramoxine,C05AD07,D04AB07,-,C,D,Cardiovascular system,Dermatologicals
+793,DCC0396,LY294002,-,-,-,-,-,-,-
+794,DCC0397,Sodium,A12CA01,-,-,A,-,Alimentary tract and metabolism,-
+795,DCC0398,Dexketoprofen,M02AA27,-,-,M,-,Musculo-skeletal system,-
+796,DCC0399,Perifosine,-,-,-,-,-,-,-
+797,DCC0400,Taxane,-,-,-,-,-,-,-
+798,DCC0401,Phorbol,-,-,-,-,-,-,-
+799,DCC0402,PD98059,-,-,-,-,-,-,-
+800,DCC0403,Tegafur,L01BC03,-,-,L,-,Antineoplastic and immunomodulating agents,-
+801,DCC0315,Captopril,C09AA01,-,-,C,-,Cardiovascular system,-
+802,DCC0316,Levetiracetam,N03AX14,-,-,N,-,Nervous system,-
+803,DCC0317,Nadolol,C07AA12,-,-,C,-,Cardiovascular system,-
+804,DCC0126,Vincristine,L01CA02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+805,DCC0127,Benazepril,C09AA07,-,-,C,-,Cardiovascular system,-
+806,DCC0128,Fluorouracil,L01BC02,-,-,L,-,Antineoplastic and immunomodulating agents,-
+807,DCC0129,Lamotrigine,N03AX09,-,-,N,-,Nervous system,-
+808,DCC0159,Nystatin,A07AA02,D01AA01,G01AA01,A,D,Alimentary tract and metabolism,Dermatologicals
+809,DCC0160,Propoxyphene,N02AC04,N02AC54,N02AC74,N,N,Nervous system,Nervous system
+810,DCC0161,Stavudine,J05AF04,-,-,J,-,Antiinfectives for systemic use,-
+811,DCC0157,Simvastatin,C10AA01,-,-,C,-,Cardiovascular system,-
+812,DCC0158,Pemetrexed,L01BA04,-,-,L,-,Antineoplastic and immunomodulating agents,-
+813,DCC0188,Meropenem,J01DH02,-,-,J,-,Antiinfectives for systemic use,-
+814,DCC0189,Irinotecan,L01XX19,-,-,L,-,Antineoplastic and immunomodulating agents,-
+815,DCC0190,Clavulanate,-,-,-,-,-,-,-
+816,DCC0191,Etoposide,L01CB01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+817,DCC0217,Ranitidine,A02BA02,A02BA07,-,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+818,DCC0218,Tacrolimus,D11AH01,L04AD02,-,D,L,Dermatologicals,Antineoplastic and immunomodulating agents
+819,DCC0219,Dorzolamide,S01EC03,-,-,S,-,Sensory organs,-
+820,DCC0130,Tigecycline,J01AA12,-,-,J,-,Antiinfectives for systemic use,-
+821,DCC0131,Methotrexate,L01BA01,L04AX03,-,L,L,Antineoplastic and immunomodulating agents,Antineoplastic and immunomodulating agents
+822,DCC0132,Carbamazepine,N03AF01,-,-,N,-,Nervous system,-
+823,DCC0162,Leucovorin,V03AF03,-,-,V,-,Various,-
+824,DCC0163,Pentazocine,N02AD01,-,-,N,-,Nervous system,-
+825,DCC0164,Latanoprost,S01EE01,-,-,S,-,Sensory organs,-
+826,DCC0165,Verapamil,C08DA01,-,-,C,-,Cardiovascular system,-
+827,DCC0166,Epinephrine,A01AD01,B02BC09,C01CA03,A,B,Alimentary tract and metabolism,Blood and blood forming organs
+828,DCC0192,Oxcarbazepine,N03AF02,-,-,N,-,Nervous system,-
+829,DCC0193,Polymyxin,A07AA05,J01XB02,S01AA18,A,J,Alimentary tract and metabolism,Antiinfectives for systemic use
+830,DCC0194,Estradiol,G03CA01,G03CA03,L02AA02,G,G,Genito-urinary system and sex hormones,Genito-urinary system and sex hormones
+831,DCC0195,Aciclovir,D06BB03,J05AB01,S01AD03,D,J,Dermatologicals,Antiinfectives for systemic use
+832,DCC0196,Naproxen,G02CC02,M01AE02,M02AA12,G,M,Genito-urinary system and sex hormones,Musculo-skeletal system
+833,DCC0220,Loteprednol,S01BA14,-,-,S,-,Sensory organs,-
+834,DCC0221,Guaifenesin,R05CA03,-,-,R,-,Respiratory system,-
+835,DCC0222,Eprosartan,C09CA02,-,-,C,-,Cardiovascular system,-
+836,DCC0223,Rapamycin,L04AA10,-,-,L,-,Antineoplastic and immunomodulating agents,-
+837,DCC0135,Atropine,A03BA01,A03BB02,N04AC01,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+838,DCC0136,Clonidine,C02AC01,N02CX02,S01EA04,C,N,Cardiovascular system,Nervous system
+839,DCC0133,Cephalexin,J01DB01,-,-,J,-,Antiinfectives for systemic use,-
+840,DCC0134,Propranolol,C07AA05,-,-,C,-,Cardiovascular system,-
+841,DCC0167,Sumatriptan,N02CC01,-,-,N,-,Nervous system,-
+842,DCC0168,Tamoxifen,L02BA01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+843,DCC0169,Losartan,C09CA01,-,-,C,-,Cardiovascular system,-
+844,DCC0170,Amphotericin,A01AB04,A07AA07,G01AA03,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+845,DCC0197,Perindopril,C09AA04,-,-,C,-,Cardiovascular system,-
+846,DCC0198,Candesartan,C09CA06,-,-,C,-,Cardiovascular system,-
+847,DCC0226,Quinapril,C09AA06,-,-,C,-,Cardiovascular system,-
+848,DCC0224,Chlorhexidine,A01AB03,B05CA02,D08AC02,A,B,Alimentary tract and metabolism,Blood and blood forming organs
+849,DCC0225,Emtricitabine,J05AF09,-,-,J,-,Antiinfectives for systemic use,-
+850,DCC0137,Enalapril,C09AA02,-,-,C,-,Cardiovascular system,-
+851,DCC0138,Diclofenac,M01AB05,M02AA15,S01BC03,M,M,Musculo-skeletal system,Musculo-skeletal system
+852,DCC0139,Fluticasone,D07AC17,R01AD08,R03BA05,D,R,Dermatologicals,Respiratory system
+853,DCC0173,Mycophenolate,L04AA06,-,-,L,-,Antineoplastic and immunomodulating agents,-
+854,DCC0174,Furosemide,C03CA01,-,-,C,-,Cardiovascular system,-
+855,DCC0171,Warfarin,B01AA03,-,-,B,-,Blood and blood forming organs,-
+856,DCC0172,Tobramycin,J01GB01,S01AA12,-,J,S,Antiinfectives for systemic use,Sensory organs
+857,DCC0199,Gentamicin,D06AX07,J01GB03,S01AA11,D,J,Dermatologicals,Antiinfectives for systemic use
+858,DCC0200,Colistin,J01XB01,A07AA10,-,J,A,Antiinfectives for systemic use,Alimentary tract and metabolism
+859,DCC0201,Indapamide,C03BA11,-,-,C,-,Cardiovascular system,-
+860,DCC0202,Tropicamide,S01FA06,-,-,S,-,Sensory organs,-
+861,DCC0227,Isosorbide,C01DA08,D03AX08,-,C,D,Cardiovascular system,Dermatologicals
+862,DCC0228,Didanosine,J05AF02,-,-,J,-,Antiinfectives for systemic use,-
+863,DCC0229,Methdilazine,R06AD04,-,-,R,-,Respiratory system,-
+864,DCC0230,Bimatoprost,S01EE03,-,-,S,-,Sensory organs,-
+865,DCC0231,Tiagabine,N03AG06,-,-,N,-,Nervous system,-
+866,DCC0140,Fluocinolone,C05AA10,D07AC04,S01BA15,C,D,Cardiovascular system,Dermatologicals
+867,DCC0141,Ethosuximide,N03AD01,-,-,N,-,Nervous system,-
+868,DCC0142,Amiloride,C03DB01,-,-,C,-,Cardiovascular system,-
+869,DCC0143,Oxytetracycline,D06AA03,G01AA07,J01AA06,D,G,Dermatologicals,Genito-urinary system and sex hormones
+870,DCC0175,Ergotamine,N02CA01,N02CA02,-,N,N,Nervous system,Nervous system
+871,DCC0176,Nitrofurantoin,J01XE01,-,-,J,-,Antiinfectives for systemic use,-
+872,DCC0177,Naltrexone,N07BB04,-,-,N,-,Nervous system,-
+873,DCC0178,Delavirdine,J05AG02,-,-,J,-,Antiinfectives for systemic use,-
+874,DCC0179,Lamivudine,J05AF05,-,-,J,-,Antiinfectives for systemic use,-
+875,DCC0180,Norethindrone,G03AC01,-,-,G,-,Genito-urinary system and sex hormones,-
+876,DCC0203,Ribavirin,J05AB04,-,-,J,-,Antiinfectives for systemic use,-
+877,DCC0204,Fentanyl,N01AH01,N02AB03,-,N,N,Nervous system,Nervous system
+878,DCC0205,Sodium,A12CA01,-,-,A,-,Alimentary tract and metabolism,-
+879,DCC0206,Propofol,N01AX10,-,-,N,-,Nervous system,-
+880,DCC0207,Ethynodiol,G03DC06,-,-,G,-,Genito-urinary system and sex hormones,-
+881,DCC0234,Amantadine,N04BB01,-,-,N,-,Nervous system,-
+882,DCC0235,Metronidazole,A01AB17,D06BX01,G01AF01,A,D,Alimentary tract and metabolism,Dermatologicals
+883,DCC0232,Quinidine,C01BA01,-,-,C,-,Cardiovascular system,-
+884,DCC0233,Repaglinide,A10BX02,-,-,A,-,Alimentary tract and metabolism,-
+885,DCC0144,Linezolid,J01XX08,-,-,J,-,Antiinfectives for systemic use,-
+886,DCC0145,Bisoprolol,C07AB07,-,-,C,-,Cardiovascular system,-
+887,DCC0146,Amodiaquine,P01BA06,-,-,P,-,"Antiparasitic products, insecticides and repellents",-
+888,DCC0147,Rifabutin,J04AB04,-,-,J,-,Antiinfectives for systemic use,-
+889,DCC0181,Lisinopril,C09AA03,-,-,C,-,Cardiovascular system,-
+890,DCC0182,Homatropine,A02BX03,-,-,A,-,Alimentary tract and metabolism,-
+891,DCC0183,Pralidoxime,V03AB04,-,-,V,-,Various,-
+892,DCC0211,Loperamide,A07DA03,A07DA05,-,A,A,Alimentary tract and metabolism,Alimentary tract and metabolism
+893,DCC0209,Diazepam,N05BA01,N05BA17,-,N,N,Nervous system,Nervous system
+894,DCC0210,Brompheniramine,R06AB01,R06AB06,-,R,R,Respiratory system,Respiratory system
+895,DCC0212,Clofazimine,J04BA01,-,-,J,-,Antiinfectives for systemic use,-
+896,DCC0236,Buprenorphine,N02AE01,N07BC01,-,N,N,Nervous system,Nervous system
+897,DCC0237,Famotidine,A02BA03,-,-,A,-,Alimentary tract and metabolism,-
+898,DCC0238,Misoprostol,A02BB01,-,-,A,-,Alimentary tract and metabolism,-
+899,DCC0239,Salmeterol,R03AC12,-,-,R,-,Respiratory system,-
+900,DCC0148,Imatinib,L01XE01,-,-,L,-,Antineoplastic and immunomodulating agents,-
+901,DCC0149,Triamcinolone,A01AC01,D07AB09,D07XB02,A,D,Alimentary tract and metabolism,Dermatologicals
+902,DCC0150,Efavirenz,J05AG03,-,-,J,-,Antiinfectives for systemic use,-
+903,DCC0151,Bacitracin,D06AX05,R02AB04,J01XX10,D,R,Dermatologicals,Respiratory system
