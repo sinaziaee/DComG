@@ -563,10 +563,13 @@ def save_preds_in_csv(all_new_pairs, reverse_node_dict, name):
         print(name)
 
     out_dir = str(pathlib.Path().resolve())
-    out_path = f'{out_dir}/predictions/{name}.csv'
+    out_path = f'{out_dir}/new_predictions/model_and_features/{name}.csv'
 
-    if 'predictions' not in os.listdir(out_dir):
-        os.mkdir(f'{out_dir}/predictions/')
+    if 'new_predictions' not in os.listdir(out_dir):
+        os.mkdir(f'{out_dir}/new_predictions/')
+
+    if 'model_and_features' not in os.listdir(f'{out_dir}/new_predictions'):
+        os.mkdir(f'{out_dir}/new_predictions/model_and_features/')
 
     temp_df.to_csv(out_path, index=False)
 ################################################################

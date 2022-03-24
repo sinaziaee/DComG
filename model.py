@@ -11,6 +11,7 @@ import torch
 class Net(torch.nn.Module):
   def __init__(self, in_channels, hid_channels, out_channels):
     super(Net, self).__init__()
+    torch.manual_seed(0)
     # 1st type of graph layer
     self.conv1 = GCNConv(in_channels, hid_channels)
     self.conv2 = GCNConv(hid_channels, hid_channels)
