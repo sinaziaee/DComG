@@ -256,7 +256,7 @@ def plot_comparison(roc_auc_score):
         textcoords='offset points')
         bar.set_width(width)
 
-    plt.ylim(0.92, 0.99)
+    plt.ylim(0.92, 0.984)
     plt.grid()
     plt.show()
 
