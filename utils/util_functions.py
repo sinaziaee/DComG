@@ -235,11 +235,21 @@ def plot_layers_curve(model_layers, loss, val, test):
 
   plt.show()
 
-def plot_comparison(roc_auc_score):
-    method_names = ['GTB [2019]', 'AuDNNsynergy [2021]', 'DComG']
-    scores = [0.949, 0.925, roc_auc_score]
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
 
-    plt.figure(figsize=(6, 6))
+def plot_comparison(roc_auc_score):
+    base_dir = str(pathlib.Path().resolve())
+    method_names = ['Huang et al[2014]', 'Sun et al.[2015]', 'Xu et al.[2017]', 
+    'Shi et al.(Ensumble learning)[2017]', 'Shi et al.(TLMCS)[2019]', 'Liu et al.[2019]', 'Zhang et al.[2019]', 'Zhang et al.[2021]', 
+    'Ave-prev-methods', 'DCGG(our method)']
+
+    method_names = ['LR [2014]', 'RACS [2015]', 'SGB [2017]', 'Ensumble Learning [2017]', 'TLMCS [2019]','GTB [2019]', 
+    'FFM [2019]', 'AuDNNsynergy [2021]', 'Ave-prev-methods', 'DCGG(our method)']
+    scores = [0.92, 0.85, 0.95, 0.91, 0.82, 0.94, 0.92, 0.91, 0.90, roc_auc_score]
+
+    plt.figure(figsize=(18, 6))
 
     d = {'models': method_names, 'values': scores}
     df = pd.DataFrame(d, columns=['models', 'values'])
@@ -249,15 +259,27 @@ def plot_comparison(roc_auc_score):
 
     plt.title('AUC Test Score')
     for i, bar in enumerate(plots.patches):
-        plots.annotate(format(bar.get_height(), '.3f'),
+        # plots.annotate(format(bar.get_height(), '.3f'),
+        plots.annotate(format(bar.get_height(), '.2f'),
         (bar.get_x() + bar.get_width() / 2,
         bar.get_height()), ha='center', va='center', 
         size=15, xytext=(-12, 10),
         textcoords='offset points')
         bar.set_width(width)
+        if i == len(method_names)-1 or i == len(method_names)-2:
+            bar.set_color('black')
 
-    plt.ylim(0.92, 0.984)
+    
+    for item in plots.get_xticklabels():
+        item.set_rotation(-30)
+
+    plt.ylim(0.815, 0.975)
     plt.grid()
+
+    if 'output_figs' not in os.listdir(base_dir):
+        os.mkdir(f'{base_dir}/output_figs/')
+    plt.savefig(f'{base_dir}/output_figs/barplot_comparison.eps', format='eps')
+    plt.savefig(f'{base_dir}/output_figs/barplot_comparison.png', dpi=500)
     plt.show()
 
 def train_model_on_folds_and_decode_all(folds, num_epochs, data=None, index=0, in_channels=None, hid_channels=128, out_channels=64, device=None, model_class=None, lr=0.0005, verbose=1):

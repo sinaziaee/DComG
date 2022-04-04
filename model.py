@@ -76,14 +76,15 @@ class Net(torch.nn.Module):
       x = dropout(x, p=0.5, training=self.training)
       x = self.conv3(x, edge_index)
     ####################################################
-    elif index == 6:
-      x = self.conv1(x, edge_index)
-      x = x.relu()
-      x = dropout(x, p=0.5, training=self.training)
-      x = self.conv3(x, edge_index)
+    # elif index == 6:
+    #   x = self.conv1(x, edge_index)
+    #   x = x.relu()
+    #   x = dropout(x, p=0.5, training=self.training)
+    #   x = self.conv3(x, edge_index)
     elif index == 7:
       x = self.conv1(x, edge_index)
       x = x.relu()
+      x = dropout(x, p=0.5, training=self.training)
       x = self.conv3(x, edge_index)
     elif index == 8:
       x = self.conv1(x, edge_index)
