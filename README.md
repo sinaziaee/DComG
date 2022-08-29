@@ -3,11 +3,11 @@
 MoRGH is used in movie recommender systems. This is our implementation of MoRGH to predict the movies which 
 a person can be interested based on a hybrid approach of collaborative filtering and content based.
 
-Under Review in Journal of Intelligent Information Systems
+Accepted and Published in 2022 8th International Conference on Web Research(ICWR)
 
 ## DComG: Drug Combination prediction by applying GNNs on DDI node2vec 
 
-Authors: S.S. Ziaee, H. Rahmani, M. Nazari, M. Aghajani
+Authors: S.S. Ziaee, H. Rahmani, M. Tabatabaei
 
 MoRGH: main steps: 
 
