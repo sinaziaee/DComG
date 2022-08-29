@@ -1,7 +1,7 @@
 # DComG
 
 DComG is a drug combination prediction technique, which exploits GNNS and GAEs and Node2vec features extracted from Drug-Drug-interaction network. 
-Accepted and Published in 2022 8th International Conference on Web Research(ICWR)
+Accepted and Published in 2022 8th International Conference on Web Research(ICWR).
 
 ## DComG: Drug Combination prediction by applying GNNs on DDI node2vec 
 
